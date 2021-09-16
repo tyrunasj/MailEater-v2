@@ -1,20 +1,21 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Custom MailEtaer fro Ivanti ServiceManager
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
-
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+    1. Apply Packages:
+	    1.1 XSC_MailEaterBase V2.MetadataPatch
+	    1.2 XSC_MailEaterBase V2 External.MetadataPatch
+	    1.3 XSC_MailEaterIncident V2.MetadataPatch
+	    1.4 XSC_MailEaterServiceReq V2.MetadataPatch
+	    1.5 XSC_MailEaterChange V2.MetadataPatch
+	    1.6 XSC_MailEaterApprovalVote V2.MetadataPatch
+	    1.7 XSC_MailEaterAssignment V2.MetadataPatch
+	    1.8 XSC_MailEaterWorkOrder V2.MetadataPatch
+    2. Add "XSC_No_Action.xsl" as Additional XSL to "XSC_Email" Data Import Connection
+    3. Configure mailbox (Email Processor - "ExportEmailAsXml", Data Import Connection - "XSC_Email")
+    4. In Global Constant "XSC MailEater From Address" change value to Email Listener Address
+    5. Add Quick Actions to Journal.Email
+    6. Add Custom Object Name Mapping
+    7. Add Task Assignment Status Keywords (Optional)
+    8. Add Task WorkOrder Status Keywords (Optional)
+    9. Add FRS Approval Status Keywords (Optional)
