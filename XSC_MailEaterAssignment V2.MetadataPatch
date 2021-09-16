@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Metadata Name="XSC_MailEaterAssignment V2" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T09:15:35.1474677Z" ClientSchemaVersion="1.1" PackageType="incremental" Exported="True">
+  <Source Host="stg-newsupport.synergy.lt" Role="Admin" RoleName="Admin" Username="HEATAdmin" TenantID="stg-NEWSUPPORT.synergy.lt" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T09:15:35.1474677Z" SystemVersion="2020.1.0.20200402" SystemTableVersion="671.0" SystemSchemaVersion="1.0" />
+  <Target Host="stg-newsupport.synergy.lt" Role="Admin" RoleName="Admin" Username="HEATAdmin" TenantID="stg-NEWSUPPORT.synergy.lt" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T09:15:35.1474677Z" SystemVersion="2020.1.0.20200402" SystemTableVersion="671.0" SystemSchemaVersion="1.0" />
+  <Differences>
+    <Updates>
+      <Triggers Seq="1526" DbRevision="671">
+  <Inserts>
+    <Trigger FRS_ID="XSC_AssignmentEmailLink" CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef" ObjectType="Journal#Email">
+      <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+      <TriggerEvent CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef+Event">UpdateField, InitializeField</TriggerEvent>
+      <ActionType CLR_Type="System.String">SearchAndLink</ActionType>
+      <ObjectId nil="true" CLR_Type="System.String" />
+      <TriggerConditions AggregateType="List">
+        <TriggerCondition AggregateType="Object" FRS_Index="0">
+          <FieldName CLR_Type="System.String">ParentLink_RecID</FieldName>
+          <Type CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleTriggerConditionType">Changed</Type>
+          <FromValue />
+          <ToValue />
+        </TriggerCondition>
+      </TriggerConditions>
+      <OtherTableRef nil="true" CLR_Type="System.String" />
+      <RelationshipTag nil="true" CLR_Type="System.String" />
+      <Disable CLR_Type="System.Boolean">false</Disable>
+      <ActionDefinition AggregateType="Object" ObjectType="Journal#Email" DisplayName="XSC_AssignmentEmailLink">
+        <ChildTableRef CLR_Type="System.String">Task#Assignment</ChildTableRef>
+        <RelationshipTag CLR_Type="System.String"></RelationshipTag>
+        <SearchQueries AggregateType="List" CLR_Name="SearchQuery">
+          <SearchQuery AggregateType="Object" FRS_Index="0" ObjectType="Task#Assignment">
+            <ObjectId CLR_Type="System.String">Task#Assignment</ObjectId>
+            <ObjectDisplay CLR_Type="System.String">Task</ObjectDisplay>
+            <JoinRule CLR_Type="System.String">AND</JoinRule>
+            <Condition CLR_Type="System.String">=</Condition>
+            <ConditionType CLR_Type="MetaDataDefinition.Revisions.R1.SearchConditionType">ByField</ConditionType>
+            <FieldName CLR_Type="System.String">RecId</FieldName>
+            <FieldDisplay CLR_Type="System.String">RecId</FieldDisplay>
+            <FieldAlias nil="true" CLR_Type="System.String" />
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldValue CLR_Type="System.String">$(ParentLink_RecID)</FieldValue>
+            <FieldValueDisplay CLR_Type="System.String">$(ParentLink_RecID)</FieldValueDisplay>
+            <FieldValueBehavior CLR_Type="System.String">single</FieldValueBehavior>
+            <FieldStartValue nil="true" CLR_Type="System.String" />
+            <FieldEndValue nil="true" CLR_Type="System.String" />
+            <BracketLevel CLR_Type="System.Int32">0</BracketLevel>
+            <IsClosingBracket CLR_Type="System.Boolean">false</IsClosingBracket>
+            <IsRelatedObjectQuery CLR_Type="System.Boolean">false</IsRelatedObjectQuery>
+            <RelatedObjectId CLR_Type="System.String"></RelatedObjectId>
+            <RelatedObjectDisplay CLR_Type="System.String"></RelatedObjectDisplay>
+            <RelatedObjectOp CLR_Type="System.String"></RelatedObjectOp>
+            <RelatedObjectCount CLR_Type="System.Int32">1</RelatedObjectCount>
+            <RelatedObjects AggregateType="List">
+              <RelatedObject AggregateType="Object" FRS_Index="0">
+                <ID CLR_Type="System.String">Task#Assignment</ID>
+                <ObjectId CLR_Type="System.String">Task#Assignment</ObjectId>
+                <Name CLR_Type="System.String">Task</Name>
+                <Style CLR_Type="System.String">master</Style>
+                <ThereCardinality CLR_Type="System.String"></ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="1">
+                <ID CLR_Type="System.String">Journal#.</ID>
+                <ObjectId CLR_Type="System.String">Journal#</ObjectId>
+                <Name CLR_Type="System.String">Activity History via JournalAssocTaskAssignment (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="2">
+                <ID CLR_Type="System.String">Attachment#.</ID>
+                <ObjectId CLR_Type="System.String">Attachment#</ObjectId>
+                <Name CLR_Type="System.String">Attachment via AssignmentContainsAttachment (0...1 : N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="3">
+                <ID CLR_Type="System.String">Audit_Task#.</ID>
+                <ObjectId CLR_Type="System.String">Audit_Task#</ObjectId>
+                <Name CLR_Type="System.String">Audit_Task via AuditHistoryRelationship (1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="4">
+                <ID CLR_Type="System.String">Frs_CalendarItem#.TaskCalendarItem</ID>
+                <ObjectId CLR_Type="System.String">Frs_CalendarItem#</ObjectId>
+                <Name CLR_Type="System.String">Calendar Item via TaskAssignmentAssocFrs_CalendarItem (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="5">
+                <ID CLR_Type="System.String">Change#.</ID>
+                <ObjectId CLR_Type="System.String">Change#</ObjectId>
+                <Name CLR_Type="System.String">Change via ChangeContainsTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="6">
+                <ID CLR_Type="System.String">FRS_Knowledge#Document.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Knowledge#Document</ObjectId>
+                <Name CLR_Type="System.String">Document via FRS_KnowledgeDocumentAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="7">
+                <ID CLR_Type="System.String">FRS_def_dsm_software#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_def_dsm_software#</ObjectId>
+                <Name CLR_Type="System.String">DSM Managed Software via FRS_def_dsm_softwareAssociatedTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="8">
+                <ID CLR_Type="System.String">FRS_ops_dsm_integration#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_ops_dsm_integration#</ObjectId>
+                <Name CLR_Type="System.String">DSM Operations Integration via TaskAssociatedFRS_ops_dsm_integration (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="9">
+                <ID CLR_Type="System.String">Employee#.</ID>
+                <ObjectId CLR_Type="System.String">Employee#</ObjectId>
+                <Name CLR_Type="System.String">Employee via EmployeeContainsTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="10">
+                <ID CLR_Type="System.String">Employee#.Resource</ID>
+                <ObjectId CLR_Type="System.String">Employee#</ObjectId>
+                <Name CLR_Type="System.String">Employee via Resource (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="11">
+                <ID CLR_Type="System.String">FRS_Knowledge#ErrorMessage.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Knowledge#ErrorMessage</ObjectId>
+                <Name CLR_Type="System.String">Error Message via FRS_KnowledgeErrorMessageAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="12">
+                <ID CLR_Type="System.String">Frs_data_escalation_watch#.</ID>
+                <ObjectId CLR_Type="System.String">Frs_data_escalation_watch#</ObjectId>
+                <Name CLR_Type="System.String">Escalation Watch via AssignmentAssociatedEscalationWatch (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="13">
+                <ID CLR_Type="System.String">Frs_data_escalation_watch#.AssignmentAssocResolutionEscWatch</ID>
+                <ObjectId CLR_Type="System.String">Frs_data_escalation_watch#</ObjectId>
+                <Name CLR_Type="System.String">Escalation Watch via AssignmentAssocResolutionEscWatch (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="14">
+                <ID CLR_Type="System.String">Frs_data_escalation_watch#.AssignmentAssocResponseEscWatch</ID>
+                <ObjectId CLR_Type="System.String">Frs_data_escalation_watch#</ObjectId>
+                <Name CLR_Type="System.String">Escalation Watch via AssignmentAssocResponseEscWatch (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="15">
+                <ID CLR_Type="System.String">FulfillmentItem#.TaskAssignment</ID>
+                <ObjectId CLR_Type="System.String">FulfillmentItem#</ObjectId>
+                <Name CLR_Type="System.String">Fulfillment Item via FulfillmentItemAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="16">
+                <ID CLR_Type="System.String">FulfillmentItem#.Task</ID>
+                <ObjectId CLR_Type="System.String">FulfillmentItem#</ObjectId>
+                <Name CLR_Type="System.String">Fulfillment Item via FulfillmentItemContainsTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="17">
+                <ID CLR_Type="System.String">FRS_HC_CallLog#.Task</ID>
+                <ObjectId CLR_Type="System.String">FRS_HC_CallLog#</ObjectId>
+                <Name CLR_Type="System.String">HEAT Call Log via FRS_HC_CallLogAssocTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="18">
+                <ID CLR_Type="System.String">FRS_HC_CallLog#.Assignment</ID>
+                <ObjectId CLR_Type="System.String">FRS_HC_CallLog#</ObjectId>
+                <Name CLR_Type="System.String">HEAT Call Log via FRS_HC_CallLogAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="19">
+                <ID CLR_Type="System.String">Incident#.Rev3</ID>
+                <ObjectId CLR_Type="System.String">Incident#</ObjectId>
+                <Name CLR_Type="System.String">Incident via  (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="20">
+                <ID CLR_Type="System.String">Incident#.Rev2</ID>
+                <ObjectId CLR_Type="System.String">Incident#</ObjectId>
+                <Name CLR_Type="System.String">Incident via IncidentAssociatedCancelledTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="21">
+                <ID CLR_Type="System.String">Incident#.</ID>
+                <ObjectId CLR_Type="System.String">Incident#</ObjectId>
+                <Name CLR_Type="System.String">Incident via IncidentContainsTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="22">
+                <ID CLR_Type="System.String">FRS_Knowledge#IssueResolution.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Knowledge#IssueResolution</ObjectId>
+                <Name CLR_Type="System.String">Issue and Resolution via FRS_KnowledgeIssueResolutionAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="23">
+                <ID CLR_Type="System.String">Frs_ITFM_Transaction#.Transaction</ID>
+                <ObjectId CLR_Type="System.String">Frs_ITFM_Transaction#</ObjectId>
+                <Name CLR_Type="System.String">ITFM Cost Item via TaskAssocFrs_ITFM_Transaction (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="24">
+                <ID CLR_Type="System.String">IVNT_Booking#.TaskBooking</ID>
+                <ObjectId CLR_Type="System.String">IVNT_Booking#</ObjectId>
+                <Name CLR_Type="System.String">IVNT_Booking via TaskAssignmentContainsBooking (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="25">
+                <ID CLR_Type="System.String">FRS_Knowledge#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Knowledge#</ObjectId>
+                <Name CLR_Type="System.String">Knowledge via FRS_KnowledgeAssociatedTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="26">
+                <ID CLR_Type="System.String">Frs_data_cost_items#.Frs_data_cost_items</ID>
+                <ObjectId CLR_Type="System.String">Frs_data_cost_items#</ObjectId>
+                <Name CLR_Type="System.String">Legacy Cost Item via TaskAssocFrs_data_cost_items (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="27">
+                <ID CLR_Type="System.String">ReleaseMilestone#.</ID>
+                <ObjectId CLR_Type="System.String">ReleaseMilestone#</ObjectId>
+                <Name CLR_Type="System.String">Milestone via  (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="28">
+                <ID CLR_Type="System.String">ReleaseMilestone#.Rev2</ID>
+                <ObjectId CLR_Type="System.String">ReleaseMilestone#</ObjectId>
+                <Name CLR_Type="System.String">Milestone via ReleaseMilestoneAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="29">
+                <ID CLR_Type="System.String">FRS_MyItem#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_MyItem#</ObjectId>
+                <Name CLR_Type="System.String">My Item via InternalTaskAssociatedMyItem (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="30">
+                <ID CLR_Type="System.String">MyShelfItem#.shelftotask</ID>
+                <ObjectId CLR_Type="System.String">MyShelfItem#</ObjectId>
+                <Name CLR_Type="System.String">My Shelf Item via MyShelfItemAssocTaskAssignment (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="31">
+                <ID CLR_Type="System.String">ManagedSoftware#OperatingSystemSet.</ID>
+                <ObjectId CLR_Type="System.String">ManagedSoftware#OperatingSystemSet</ObjectId>
+                <Name CLR_Type="System.String">Operating System Set via OperatingSystemSetAssociatedTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="32">
+                <ID CLR_Type="System.String">ServiceAgreement#OLA.TaskAssignment</ID>
+                <ObjectId CLR_Type="System.String">ServiceAgreement#OLA</ObjectId>
+                <Name CLR_Type="System.String">Operational Level Agreement via ServiceAgreementOLAAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="33">
+                <ID CLR_Type="System.String">FRS_Knowledge#Patch.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Knowledge#Patch</ObjectId>
+                <Name CLR_Type="System.String">Patch via FRS_KnowledgePatchAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="34">
+                <ID CLR_Type="System.String">Problem#.</ID>
+                <ObjectId CLR_Type="System.String">Problem#</ObjectId>
+                <Name CLR_Type="System.String">Problem via ProblemContainsTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="35">
+                <ID CLR_Type="System.String">Frs_Prj_Phase#.ProjectPhaseTask</ID>
+                <ObjectId CLR_Type="System.String">Frs_Prj_Phase#</ObjectId>
+                <Name CLR_Type="System.String">Project Phase via Frs_Prj_PhaseAssocTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="36">
+                <ID CLR_Type="System.String">Frs_Prj_Phase#.ProjectTask</ID>
+                <ObjectId CLR_Type="System.String">Frs_Prj_Phase#</ObjectId>
+                <Name CLR_Type="System.String">Project Phase via Frs_Prj_PhaseAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="37">
+                <ID CLR_Type="System.String">ivnt_PurchaseOrder#.ivnt_PurchaseOrderAssocTaskAssignment</ID>
+                <ObjectId CLR_Type="System.String">ivnt_PurchaseOrder#</ObjectId>
+                <Name CLR_Type="System.String">Purchase Order via ivnt_PurchaseOrderAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="38">
+                <ID CLR_Type="System.String">FRS_Knowledge#QandA.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Knowledge#QandA</ObjectId>
+                <Name CLR_Type="System.String">Q &amp; A via FRS_KnowledgeQandAAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="39">
+                <ID CLR_Type="System.String">FRS_Knowledge#Reference.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Knowledge#Reference</ObjectId>
+                <Name CLR_Type="System.String">Reference via FRS_KnowledgeReferenceAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="40">
+                <ID CLR_Type="System.String">ServiceAgreement#.ServiceAgreement</ID>
+                <ObjectId CLR_Type="System.String">ServiceAgreement#</ObjectId>
+                <Name CLR_Type="System.String">Service Agreement via TaskAssocServiceAgreement (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="41">
+                <ID CLR_Type="System.String">ServiceReq#.</ID>
+                <ObjectId CLR_Type="System.String">ServiceReq#</ObjectId>
+                <Name CLR_Type="System.String">Service Request via ServiceReqAssociatedTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="42">
+                <ID CLR_Type="System.String">ServiceReq#.InternalTask</ID>
+                <ObjectId CLR_Type="System.String">ServiceReq#</ObjectId>
+                <Name CLR_Type="System.String">Service Request via ServiceReqAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="43">
+                <ID CLR_Type="System.String">CI#Service.Task</ID>
+                <ObjectId CLR_Type="System.String">CI#Service</ObjectId>
+                <Name CLR_Type="System.String">Service via CIServiceAssocTask (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="44">
+                <ID CLR_Type="System.String">CI#Service.TaskAssignment</ID>
+                <ObjectId CLR_Type="System.String">CI#Service</ObjectId>
+                <Name CLR_Type="System.String">Service via CIServiceAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="45">
+                <ID CLR_Type="System.String">ManagedSoftware#SoftwarePackage.</ID>
+                <ObjectId CLR_Type="System.String">ManagedSoftware#SoftwarePackage</ObjectId>
+                <Name CLR_Type="System.String">Software Package via SoftwarePackageAssociatedTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="46">
+                <ID CLR_Type="System.String">ManagedSoftware#SoftwareSet.</ID>
+                <ObjectId CLR_Type="System.String">ManagedSoftware#SoftwareSet</ObjectId>
+                <Name CLR_Type="System.String">Software Set via SoftwareSetAssociatedTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="47">
+                <ID CLR_Type="System.String">Task#Assignment.Predecessor</ID>
+                <ObjectId CLR_Type="System.String">Task#Assignment</ObjectId>
+                <Name CLR_Type="System.String">Task via Predecessor (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="48">
+                <ID CLR_Type="System.String">Task#Assignment.Successor</ID>
+                <ObjectId CLR_Type="System.String">Task#Assignment</ObjectId>
+                <Name CLR_Type="System.String">Task via Successor (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="49">
+                <ID CLR_Type="System.String">Frs_data_workflow_instance#.TaskAssocFrs_data_workflow_instance</ID>
+                <ObjectId CLR_Type="System.String">Frs_data_workflow_instance#</ObjectId>
+                <Name CLR_Type="System.String">Workflow Instance via TaskAssocFrs_data_workflow_instance (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+            </RelatedObjects>
+            <RelatedRelatedObjects nil="true" />
+            <MasterObjectId CLR_Type="System.String">Task#Assignment</MasterObjectId>
+            <IsRelatedObjectCondition CLR_Type="System.Boolean">false</IsRelatedObjectCondition>
+            <SubQueries nil="true" CLR_Name="SubQuery" />
+          </SearchQuery>
+        </SearchQueries>
+        <ActionType CLR_Type="System.String">SearchAndLink</ActionType>
+        <CreatedBy CLR_Type="System.String">HEATAdmin</CreatedBy>
+        <CreatedDateTime CLR_Type="System.DateTime">2021-09-09T08:46:54.783Z</CreatedDateTime>
+        <Description nil="true" CLR_Type="System.String" />
+        <DisabledExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <ExecConfirm CLR_Type="System.Boolean">false</ExecConfirm>
+        <ExecConfirmMsg nil="true" CLR_Type="System.String" />
+        <GroupName nil="true" CLR_Type="System.String" />
+        <HiddenExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+        <Id CLR_Type="System.String">df042d4a-cfc6-4c10-abf0-bdf2626879d1</Id>
+        <IsDisabled CLR_Type="System.Boolean">false</IsDisabled>
+        <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+        <LastModified CLR_Type="System.DateTime">0001-01-01T00:00:00</LastModified>
+        <TenantMetaRevision CLR_Type="System.Int32">0</TenantMetaRevision>
+        <ModifiedBy nil="true" CLR_Type="System.String" />
+        <Name CLR_Type="System.String">XSC_AssignmentEmailLink</Name>
+        <OwnerId nil="true" CLR_Type="System.String" />
+        <Permissions />
+        <RoleScopes nil="true" />
+        <ShouldSave CLR_Type="System.Boolean">false</ShouldSave>
+        <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+        <Revision nil="true" CLR_Type="System.String" />
+      </ActionDefinition>
+      <Name CLR_Type="System.String">XSC_AssignmentEmailLink</Name>
+      <Description CLR_Type="System.String"></Description>
+      <ConditionalExpression AggregateType="Object" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" ObjectType="Journal#Email">
+        <ExpressionPrettyText CLR_Type="System.String"><![CDATA[$(nvl(ParentLink_RecID,  "") != "" && Category == "Incoming Email" &&&#x13;&#x10;  ParentLink_Category == "Task.Assignment")]]></ExpressionPrettyText>
+        <Description nil="true" CLR_Type="System.String" />
+        <FieldRefs AggregateType="List">
+          <FieldRef CLR_Type="System.String" FRS_Index="0">ParentLink_RecID</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="1">Category</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="2">ParentLink_Category</FieldRef>
+        </FieldRefs>
+        <IsFullExpression CLR_Type="System.Boolean">false</IsFullExpression>
+        <Name nil="true" CLR_Type="System.String" />
+        <Tree AggregateType="Object">
+          <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">And</Op>
+          <Left AggregateType="Object">
+            <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">And</Op>
+            <Left AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">NotEqual</Op>
+              <Left AggregateType="Object">
+                <Arguments AggregateType="List">
+                  <Argument AggregateType="Object" FRS_Index="0">
+                    <FieldIndex CLR_Type="System.Int32">0</FieldIndex>
+                    <Details AggregateType="Object">
+                      <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                      <Selector CLR_Type="System.String">ParentLink_RecID</Selector>
+                      <SubSelector nil="true" CLR_Type="System.String" />
+                      <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                      <Qualifiers nil="true" />
+                      <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                    </Details>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+                  </Argument>
+                  <Argument AggregateType="Object" FRS_Index="1">
+                    <Value CLR_Type="System.String"></Value>
+                    <LongImage nil="true" CLR_Type="System.String" />
+                    <IsHex CLR_Type="System.Boolean">false</IsHex>
+                    <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+                  </Argument>
+                </Arguments>
+                <FunctionName CLR_Type="System.String">nvl</FunctionName>
+                <IsMethod CLR_Type="System.Boolean">false</IsMethod>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Function</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.String"></Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Left>
+            <Right AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+              <Left AggregateType="Object">
+                <FieldIndex CLR_Type="System.Int32">1</FieldIndex>
+                <Details AggregateType="Object">
+                  <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                  <Selector CLR_Type="System.String">Category</Selector>
+                  <SubSelector nil="true" CLR_Type="System.String" />
+                  <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                  <Qualifiers nil="true" />
+                  <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                </Details>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.String">Incoming Email</Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Right>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+          </Left>
+          <Right AggregateType="Object">
+            <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+            <Left AggregateType="Object">
+              <FieldIndex CLR_Type="System.Int32">2</FieldIndex>
+              <Details AggregateType="Object">
+                <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                <Selector CLR_Type="System.String">ParentLink_Category</Selector>
+                <SubSelector nil="true" CLR_Type="System.String" />
+                <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                <Qualifiers nil="true" />
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+              </Details>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+            </Left>
+            <Right AggregateType="Object">
+              <Value CLR_Type="System.String">Task.Assignment</Value>
+              <LongImage nil="true" CLR_Type="System.String" />
+              <IsHex CLR_Type="System.Boolean">false</IsHex>
+              <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+            </Right>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+          </Right>
+          <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+        </Tree>
+        <ValidationStatus CLR_Type="MetaDataDefinition.Revisions.R1.ReadOnly.ExpressionValidationStatus">Ok</ValidationStatus>
+      </ConditionalExpression>
+      <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+    </Trigger>
+  </Inserts>
+</Triggers>
+    </Updates>
+  </Differences>
+  <Views>
+    <Related />
+    <Unrelated />
+  </Views>
+</Metadata>

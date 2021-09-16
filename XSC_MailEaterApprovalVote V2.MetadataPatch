@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Metadata Name="XSC_MailEaterApprovalVote V2" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T14:31:27.984874Z" ClientSchemaVersion="1.1" PackageType="incremental" Exported="True">
+  <Source Host="stg-newsupport.synergy.lt" Role="Admin" RoleName="Admin" Username="HEATAdmin" TenantID="stg-NEWSUPPORT.synergy.lt" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T14:31:27.984874Z" SystemVersion="2020.1.0.20200402" SystemTableVersion="671.0" SystemSchemaVersion="1.0" />
+  <Target Host="stg-newsupport.synergy.lt" Role="Admin" RoleName="Admin" Username="HEATAdmin" TenantID="stg-NEWSUPPORT.synergy.lt" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T14:31:27.984874Z" SystemVersion="2020.1.0.20200402" SystemTableVersion="671.0" SystemSchemaVersion="1.0" />
+  <Differences>
+    <Updates>
+      <Triggers Seq="1508" DbRevision="671">
+  <Inserts>
+    <Trigger FRS_ID="XSC_AppVoteEmailLink" CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef" ObjectType="Journal#Email">
+      <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+      <TriggerEvent CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef+Event">UpdateField, InitializeField</TriggerEvent>
+      <ActionType CLR_Type="System.String">SearchAndLink</ActionType>
+      <ObjectId nil="true" CLR_Type="System.String" />
+      <TriggerConditions AggregateType="List">
+        <TriggerCondition AggregateType="Object" FRS_Index="0">
+          <FieldName CLR_Type="System.String">ParentLink_RecID</FieldName>
+          <Type CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleTriggerConditionType">Changed</Type>
+          <FromValue />
+          <ToValue />
+        </TriggerCondition>
+      </TriggerConditions>
+      <OtherTableRef nil="true" CLR_Type="System.String" />
+      <RelationshipTag nil="true" CLR_Type="System.String" />
+      <Disable CLR_Type="System.Boolean">false</Disable>
+      <ActionDefinition AggregateType="Object" ObjectType="Journal#Email" DisplayName="XSC_AppVoteEmailLink">
+        <ChildTableRef CLR_Type="System.String">FRS_ApprovalVoteTracking#</ChildTableRef>
+        <RelationshipTag CLR_Type="System.String"></RelationshipTag>
+        <SearchQueries AggregateType="List" CLR_Name="SearchQuery">
+          <SearchQuery AggregateType="Object" FRS_Index="0" ObjectType="FRS_ApprovalVoteTracking#">
+            <ObjectId CLR_Type="System.String">FRS_ApprovalVoteTracking#</ObjectId>
+            <ObjectDisplay CLR_Type="System.String">Approval Vote Tracking</ObjectDisplay>
+            <JoinRule CLR_Type="System.String">AND</JoinRule>
+            <Condition CLR_Type="System.String">=</Condition>
+            <ConditionType CLR_Type="MetaDataDefinition.Revisions.R1.SearchConditionType">ByField</ConditionType>
+            <FieldName CLR_Type="System.String">RecId</FieldName>
+            <FieldDisplay CLR_Type="System.String">RecId</FieldDisplay>
+            <FieldAlias nil="true" CLR_Type="System.String" />
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldValue CLR_Type="System.String">$(ParentLink_RecID)</FieldValue>
+            <FieldValueDisplay CLR_Type="System.String">$(ParentLink_RecID)</FieldValueDisplay>
+            <FieldValueBehavior CLR_Type="System.String">single</FieldValueBehavior>
+            <FieldStartValue nil="true" CLR_Type="System.String" />
+            <FieldEndValue nil="true" CLR_Type="System.String" />
+            <BracketLevel CLR_Type="System.Int32">0</BracketLevel>
+            <IsClosingBracket CLR_Type="System.Boolean">false</IsClosingBracket>
+            <IsRelatedObjectQuery CLR_Type="System.Boolean">false</IsRelatedObjectQuery>
+            <RelatedObjectId CLR_Type="System.String"></RelatedObjectId>
+            <RelatedObjectDisplay CLR_Type="System.String"></RelatedObjectDisplay>
+            <RelatedObjectOp CLR_Type="System.String"></RelatedObjectOp>
+            <RelatedObjectCount CLR_Type="System.Int32">1</RelatedObjectCount>
+            <RelatedObjects AggregateType="List">
+              <RelatedObject AggregateType="Object" FRS_Index="0">
+                <ID CLR_Type="System.String">FRS_ApprovalVoteTracking#</ID>
+                <ObjectId CLR_Type="System.String">FRS_ApprovalVoteTracking#</ObjectId>
+                <Name CLR_Type="System.String">Approval Vote Tracking</Name>
+                <Style CLR_Type="System.String">master</Style>
+                <ThereCardinality CLR_Type="System.String"></ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="1">
+                <ID CLR_Type="System.String">FRS_Approval#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Approval#</ObjectId>
+                <Name CLR_Type="System.String">Approval via FRS_ApprovalContainsFRS_ApprovalVoteTracking (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="2">
+                <ID CLR_Type="System.String">Audit_FRS_ApprovalVoteTracking#.</ID>
+                <ObjectId CLR_Type="System.String">Audit_FRS_ApprovalVoteTracking#</ObjectId>
+                <Name CLR_Type="System.String">Audit_FRS_ApprovalVoteTracking via AuditHistoryRelationship (1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="3">
+                <ID CLR_Type="System.String">Journal#Email.</ID>
+                <ObjectId CLR_Type="System.String">Journal#Email</ObjectId>
+                <Name CLR_Type="System.String">Email via FRS_ApprovalVoteTrackingContainsJournalEmail (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="4">
+                <ID CLR_Type="System.String">FRS_MyItem#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_MyItem#</ObjectId>
+                <Name CLR_Type="System.String">My Item via FRS_ApprovalVoteTrackingAssociatedFRS_MyItem (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+            </RelatedObjects>
+            <RelatedRelatedObjects nil="true" />
+            <MasterObjectId CLR_Type="System.String">FRS_ApprovalVoteTracking#</MasterObjectId>
+            <IsRelatedObjectCondition CLR_Type="System.Boolean">false</IsRelatedObjectCondition>
+            <SubQueries nil="true" CLR_Name="SubQuery" />
+          </SearchQuery>
+        </SearchQueries>
+        <ActionType CLR_Type="System.String">SearchAndLink</ActionType>
+        <CreatedBy CLR_Type="System.String">HEATAdmin</CreatedBy>
+        <CreatedDateTime CLR_Type="System.DateTime">2021-09-09T07:55:16.413Z</CreatedDateTime>
+        <Description nil="true" CLR_Type="System.String" />
+        <DisabledExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <ExecConfirm CLR_Type="System.Boolean">false</ExecConfirm>
+        <ExecConfirmMsg nil="true" CLR_Type="System.String" />
+        <GroupName nil="true" CLR_Type="System.String" />
+        <HiddenExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+        <Id CLR_Type="System.String">eac91e18-cf94-443e-a3d8-667e35c7cd3a</Id>
+        <IsDisabled CLR_Type="System.Boolean">false</IsDisabled>
+        <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+        <LastModified CLR_Type="System.DateTime">0001-01-01T00:00:00</LastModified>
+        <TenantMetaRevision CLR_Type="System.Int32">0</TenantMetaRevision>
+        <ModifiedBy nil="true" CLR_Type="System.String" />
+        <Name CLR_Type="System.String">XSC_AppVoteEmailLink</Name>
+        <OwnerId nil="true" CLR_Type="System.String" />
+        <Permissions />
+        <RoleScopes nil="true" />
+        <ShouldSave CLR_Type="System.Boolean">false</ShouldSave>
+        <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+        <Revision nil="true" CLR_Type="System.String" />
+      </ActionDefinition>
+      <Name CLR_Type="System.String">XSC_AppVoteEmailLink</Name>
+      <Description CLR_Type="System.String"></Description>
+      <ConditionalExpression AggregateType="Object" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" ObjectType="Journal#Email">
+        <ExpressionPrettyText CLR_Type="System.String"><![CDATA[$(nvl(ParentLink_RecID,  "") != "" && Category == "Incoming Email" &&&#x13;&#x10;  ParentLink_Category == "FRS_ApprovalVoteTracking")]]></ExpressionPrettyText>
+        <Description nil="true" CLR_Type="System.String" />
+        <FieldRefs AggregateType="List">
+          <FieldRef CLR_Type="System.String" FRS_Index="0">ParentLink_RecID</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="1">Category</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="2">ParentLink_Category</FieldRef>
+        </FieldRefs>
+        <IsFullExpression CLR_Type="System.Boolean">false</IsFullExpression>
+        <Name nil="true" CLR_Type="System.String" />
+        <Tree AggregateType="Object">
+          <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">And</Op>
+          <Left AggregateType="Object">
+            <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">And</Op>
+            <Left AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">NotEqual</Op>
+              <Left AggregateType="Object">
+                <Arguments AggregateType="List">
+                  <Argument AggregateType="Object" FRS_Index="0">
+                    <FieldIndex CLR_Type="System.Int32">0</FieldIndex>
+                    <Details AggregateType="Object">
+                      <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                      <Selector CLR_Type="System.String">ParentLink_RecID</Selector>
+                      <SubSelector nil="true" CLR_Type="System.String" />
+                      <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                      <Qualifiers nil="true" />
+                      <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                    </Details>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+                  </Argument>
+                  <Argument AggregateType="Object" FRS_Index="1">
+                    <Value CLR_Type="System.String"></Value>
+                    <LongImage nil="true" CLR_Type="System.String" />
+                    <IsHex CLR_Type="System.Boolean">false</IsHex>
+                    <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+                  </Argument>
+                </Arguments>
+                <FunctionName CLR_Type="System.String">nvl</FunctionName>
+                <IsMethod CLR_Type="System.Boolean">false</IsMethod>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Function</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.String"></Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Left>
+            <Right AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+              <Left AggregateType="Object">
+                <FieldIndex CLR_Type="System.Int32">1</FieldIndex>
+                <Details AggregateType="Object">
+                  <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                  <Selector CLR_Type="System.String">Category</Selector>
+                  <SubSelector nil="true" CLR_Type="System.String" />
+                  <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                  <Qualifiers nil="true" />
+                  <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                </Details>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.String">Incoming Email</Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Right>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+          </Left>
+          <Right AggregateType="Object">
+            <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+            <Left AggregateType="Object">
+              <FieldIndex CLR_Type="System.Int32">2</FieldIndex>
+              <Details AggregateType="Object">
+                <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                <Selector CLR_Type="System.String">ParentLink_Category</Selector>
+                <SubSelector nil="true" CLR_Type="System.String" />
+                <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                <Qualifiers nil="true" />
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+              </Details>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+            </Left>
+            <Right AggregateType="Object">
+              <Value CLR_Type="System.String">FRS_ApprovalVoteTracking</Value>
+              <LongImage nil="true" CLR_Type="System.String" />
+              <IsHex CLR_Type="System.Boolean">false</IsHex>
+              <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+            </Right>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+          </Right>
+          <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+        </Tree>
+        <ValidationStatus CLR_Type="MetaDataDefinition.Revisions.R1.ReadOnly.ExpressionValidationStatus">Ok</ValidationStatus>
+      </ConditionalExpression>
+      <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+    </Trigger>
+  </Inserts>
+</Triggers>
+    </Updates>
+  </Differences>
+  <Views>
+    <Related />
+    <Unrelated />
+  </Views>
+</Metadata>

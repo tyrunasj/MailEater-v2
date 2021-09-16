@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package Name="CustomMappingSQL.MetadataPackage" ReleaseUpgrade="true" ClientSchemaVersion="1.1">
+  <Metadata ClientSchemaVersion="1.1" Name="CustomMapping.sql">
+    <Differences>
+      <Updates>
+        <Sql>
+			<Statements>
+				INSERT [dbo].[XSC_TenantEmailBONameMapping] ([RecId], [CreatedBy], [CreatedDateTime], [LastModBy], [LastModDateTime], [ReadOnly], [ParentLink_Category], [ParentLink_RecID], [SourceBOName], [TargetBOName], [XSC_3rdParty], [XSC_SearchField], [XSC_Separator]) VALUES (N'F48B0CEF65BA47B3A2A0E75990685553', N'HEATAdmin', CAST(N'2021-09-15T10:06:39.000' AS DateTime), N'HEATAdmin', CAST(N'2021-09-15T10:06:59.000' AS DateTime), NULL, N'TenantEmailConfiguration', N'572C331B759440EF843EB0739A6E306C', N'ApprovalVote', N'FRS_ApprovalVoteTracking', 0, N'TrackingID', N'\#[ ]')
+				GO
+				INSERT [dbo].[XSC_TenantEmailBONameMapping] ([RecId], [CreatedBy], [CreatedDateTime], [LastModBy], [LastModDateTime], [ReadOnly], [ParentLink_Category], [ParentLink_RecID], [SourceBOName], [TargetBOName], [XSC_3rdParty], [XSC_SearchField], [XSC_Separator]) VALUES (N'65EF40973CD94C35B56CB0258E3392E4', N'HEATAdmin', CAST(N'2021-09-15T10:07:23.000' AS DateTime), N'HEATAdmin', CAST(N'2021-09-15T10:07:39.000' AS DateTime), NULL, N'TenantEmailConfiguration', N'572C331B759440EF843EB0739A6E306C', N'Change', N'Change', 0, N'ChangeNumber', N'\#[ ]')
+				GO
+				INSERT [dbo].[XSC_TenantEmailBONameMapping] ([RecId], [CreatedBy], [CreatedDateTime], [LastModBy], [LastModDateTime], [ReadOnly], [ParentLink_Category], [ParentLink_RecID], [SourceBOName], [TargetBOName], [XSC_3rdParty], [XSC_SearchField], [XSC_Separator]) VALUES (N'563312D3213548838E046EA2C4909646', N'HEATAdmin', CAST(N'2021-09-15T10:07:50.000' AS DateTime), N'HEATAdmin', CAST(N'2021-09-15T10:07:57.000' AS DateTime), NULL, N'TenantEmailConfiguration', N'572C331B759440EF843EB0739A6E306C', N'Incident', N'Incident', 0, N'IncidentNumber', N'\#[ ]')
+				GO
+				INSERT [dbo].[XSC_TenantEmailBONameMapping] ([RecId], [CreatedBy], [CreatedDateTime], [LastModBy], [LastModDateTime], [ReadOnly], [ParentLink_Category], [ParentLink_RecID], [SourceBOName], [TargetBOName], [XSC_3rdParty], [XSC_SearchField], [XSC_Separator]) VALUES (N'5530F32B9D9E4127B27447F122912FE0', N'HEATAdmin', CAST(N'2021-09-15T10:08:10.000' AS DateTime), N'HEATAdmin', CAST(N'2021-09-15T10:08:24.000' AS DateTime), NULL, N'TenantEmailConfiguration', N'572C331B759440EF843EB0739A6E306C', N'ServiceReq', N'ServiceReq', 0, N'ServiceReqNumber', N'\#[ ]')
+				GO
+				INSERT [dbo].[XSC_TenantEmailBONameMapping] ([RecId], [CreatedBy], [CreatedDateTime], [LastModBy], [LastModDateTime], [ReadOnly], [ParentLink_Category], [ParentLink_RecID], [SourceBOName], [TargetBOName], [XSC_3rdParty], [XSC_SearchField], [XSC_Separator]) VALUES (N'80A9A7EBBBEA4FD4A6F487A0CF4B596C', N'HEATAdmin', CAST(N'2021-09-15T10:08:32.000' AS DateTime), N'HEATAdmin', CAST(N'2021-09-15T10:08:46.000' AS DateTime), NULL, N'TenantEmailConfiguration', N'572C331B759440EF843EB0739A6E306C', N'Task', N'Task.Assignment', 0, N'AssignmentID', N'\#[ ]')
+				GO
+				INSERT [dbo].[XSC_TenantEmailBONameMapping] ([RecId], [CreatedBy], [CreatedDateTime], [LastModBy], [LastModDateTime], [ReadOnly], [ParentLink_Category], [ParentLink_RecID], [SourceBOName], [TargetBOName], [XSC_3rdParty], [XSC_SearchField], [XSC_Separator]) VALUES (N'05DDB777EC384DAC9991B3ABA721C8D7', N'HEATAdmin', CAST(N'2021-09-15T10:08:53.000' AS DateTime), N'HEATAdmin', CAST(N'2021-09-15T10:09:04.000' AS DateTime), NULL, N'TenantEmailConfiguration', N'572C331B759440EF843EB0739A6E306C', N'WorkOrder', N'Task.WorkOrder', 0, N'WorkOrderID', N'\#[ ]')
+				GO
+				INSERT [dbo].[XSC_TenantEmailTaskWorkOrderKeyword] ([RecId], [CreatedBy], [CreatedDateTime], [LastModBy], [LastModDateTime], [ReadOnly], [StatusKeyword], [TaskWorkOrderStatus], [TaskWorkOrderStatus_Valid], [ParentLink_Category], [ParentLink_RecID]) VALUES (N'D376AB17B98B456EA91EF9374E37FC19', N'HEATAdmin', CAST(N'2021-09-15T10:15:48.000' AS DateTime), N'HEATAdmin', CAST(N'2021-09-15T10:15:52.000' AS DateTime), NULL, N'Accepted', N'Accepted', N'5060294ED3634EA0AD9AB1B927AC8BE7', N'TenantEmailConfiguration', N'572C331B759440EF843EB0739A6E306C')
+				GO
+				INSERT [dbo].[XSC_TenantEmailTaskWorkOrderKeyword] ([RecId], [CreatedBy], [CreatedDateTime], [LastModBy], [LastModDateTime], [ReadOnly], [StatusKeyword], [TaskWorkOrderStatus], [TaskWorkOrderStatus_Valid], [ParentLink_Category], [ParentLink_RecID]) VALUES (N'115BE5A8F4054DD4BAC673F7F2792C99', N'HEATAdmin', CAST(N'2021-09-15T10:15:55.000' AS DateTime), N'HEATAdmin', CAST(N'2021-09-15T10:16:02.000' AS DateTime), NULL, N'Rejected', N'Rejected', N'B0928F3775614C19B89AD07085A0E34C', N'TenantEmailConfiguration', N'572C331B759440EF843EB0739A6E306C')
+				GO
+			</Statements>
+        </Sql>
+      </Updates>
+    </Differences>
+    <Notes />
+  </Metadata>
+</Package>

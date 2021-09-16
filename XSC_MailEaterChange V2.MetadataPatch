@@ -1,0 +1,2007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Metadata Name="XSC_MailEaterChange V2" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T13:07:33.2167861Z" ClientSchemaVersion="1.1" PackageType="incremental" Exported="True">
+  <Source Host="stg-newsupport.synergy.lt" Role="Admin" RoleName="Admin" Username="HEATAdmin" TenantID="stg-NEWSUPPORT.synergy.lt" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T13:07:33.2167861Z" SystemVersion="2020.1.0.20200402" SystemTableVersion="671.0" SystemSchemaVersion="1.0" />
+  <Target Host="stg-newsupport.synergy.lt" Role="Admin" RoleName="Admin" Username="HEATAdmin" TenantID="stg-NEWSUPPORT.synergy.lt" TimeZone="FLE Standard Time;120;(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius;FLE Standard Time;FLE Daylight Time;[01:01:0001;12:31:9999;60;[0;03:00:00;3;5;0;];[0;04:00:00;10;5;0;];];" TimeStamp="2021-09-09T13:07:33.2167861Z" SystemVersion="2020.1.0.20200402" SystemTableVersion="671.0" SystemSchemaVersion="1.0" />
+  <Differences>
+    <Updates>
+      <BusinessObjects Seq="1494" DbRevision="671">
+  <Updates>
+    <BusinessObject FRS_ID="Change#" CLR_Type="MetaDataDefinition.Revisions.R1.TableMetaData" ObjectType="Change#" DisplayName="Change">
+      <Updates>
+        <Fields AggregateType="Dictionary">
+          <Inserts>
+            <Field AggregateType="Object" FRS_ID="XSC_ExternalTicketNumber" DisplayName="External Ticket Number">
+              <ReadOnly CLR_Type="System.String">ReadOnly</ReadOnly>
+              <RecIdSuffix CLR_Type="System.String">_RecID</RecIdSuffix>
+              <CategorySuffix CLR_Type="System.String">_Category</CategorySuffix>
+              <ValidSuffix CLR_Type="System.String">_Valid</ValidSuffix>
+              <CurrencySuffix CLR_Type="System.String">_Currency</CurrencySuffix>
+              <CurrencyValidSuffix CLR_Type="System.String">_CurrencyValid</CurrencyValidSuffix>
+              <TimezoneSuffix CLR_Type="System.String">_timezone</TimezoneSuffix>
+              <Annotations nil="true" CLR_Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+              <CommonlySearched CLR_Type="System.Boolean">false</CommonlySearched>
+              <ComputeHash CLR_Type="System.Boolean">true</ComputeHash>
+              <DataType CLR_Type="MetaDataDefinition.DBDataType">UnicodeText</DataType>
+              <Description CLR_Type="System.String"></Description>
+              <DesignerName nil="true" CLR_Type="System.String" />
+              <DisplayName CLR_Type="System.String">External Ticket Number</DisplayName>
+              <FieldName CLR_Type="System.String">XSC_ExternalTicketNumber</FieldName>
+              <FieldType CLR_Type="MetaDataDefinition.Revisions.R1.FieldType">Simple</FieldType>
+              <Format nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.IFieldFormat" />
+              <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+              <IsCommonlyUsed CLR_Type="System.Boolean">false</IsCommonlyUsed>
+              <IsFrsOwned CLR_Type="System.Boolean">false</IsFrsOwned>
+              <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+              <IsLocalizable CLR_Type="System.Boolean">false</IsLocalizable>
+              <Length CLR_Type="System.Int32">128</Length>
+              <Link nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.LinkMetaData" />
+              <Nullable CLR_Type="System.Boolean">true</Nullable>
+              <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+              <Scale CLR_Type="System.Int32">0</Scale>
+              <SourceFieldName nil="true" CLR_Type="System.String" />
+              <SourceTableRef nil="true" CLR_Type="System.String" />
+              <Stored CLR_Type="System.Boolean">true</Stored>
+              <System CLR_Type="System.Boolean">false</System>
+              <Unique CLR_Type="System.Boolean">false</Unique>
+              <IsContractField CLR_Type="System.Boolean">false</IsContractField>
+            </Field>
+          </Inserts>
+        </Fields>
+      </Updates>
+    </BusinessObject>
+  </Updates>
+</BusinessObjects>
+      <BusinessObjects Seq="1495" DbRevision="671">
+  <Updates>
+    <BusinessObject FRS_ID="Change#" CLR_Type="MetaDataDefinition.Revisions.R1.TableMetaData" ObjectType="Change#" DisplayName="Change">
+      <Updates>
+        <Fields AggregateType="Dictionary">
+          <Inserts>
+            <Field AggregateType="Object" FRS_ID="XSC_InitialEmailRecId" DisplayName="XSC_InitialEmailRecId">
+              <ReadOnly CLR_Type="System.String">ReadOnly</ReadOnly>
+              <RecIdSuffix CLR_Type="System.String">_RecID</RecIdSuffix>
+              <CategorySuffix CLR_Type="System.String">_Category</CategorySuffix>
+              <ValidSuffix CLR_Type="System.String">_Valid</ValidSuffix>
+              <CurrencySuffix CLR_Type="System.String">_Currency</CurrencySuffix>
+              <CurrencyValidSuffix CLR_Type="System.String">_CurrencyValid</CurrencyValidSuffix>
+              <TimezoneSuffix CLR_Type="System.String">_timezone</TimezoneSuffix>
+              <Annotations nil="true" CLR_Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+              <CommonlySearched CLR_Type="System.Boolean">false</CommonlySearched>
+              <ComputeHash CLR_Type="System.Boolean">true</ComputeHash>
+              <DataType CLR_Type="MetaDataDefinition.DBDataType">Text</DataType>
+              <Description CLR_Type="System.String"></Description>
+              <DesignerName nil="true" CLR_Type="System.String" />
+              <DisplayName CLR_Type="System.String">XSC_InitialEmailRecId</DisplayName>
+              <FieldName CLR_Type="System.String">XSC_InitialEmailRecId</FieldName>
+              <FieldType CLR_Type="MetaDataDefinition.Revisions.R1.FieldType">Simple</FieldType>
+              <Format nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.IFieldFormat" />
+              <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+              <IsCommonlyUsed CLR_Type="System.Boolean">false</IsCommonlyUsed>
+              <IsFrsOwned CLR_Type="System.Boolean">false</IsFrsOwned>
+              <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+              <IsLocalizable CLR_Type="System.Boolean">false</IsLocalizable>
+              <Length CLR_Type="System.Int32">32</Length>
+              <Link nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.LinkMetaData" />
+              <Nullable CLR_Type="System.Boolean">true</Nullable>
+              <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+              <Scale CLR_Type="System.Int32">0</Scale>
+              <SourceFieldName nil="true" CLR_Type="System.String" />
+              <SourceTableRef nil="true" CLR_Type="System.String" />
+              <Stored CLR_Type="System.Boolean">true</Stored>
+              <System CLR_Type="System.Boolean">false</System>
+              <Unique CLR_Type="System.Boolean">false</Unique>
+              <IsContractField CLR_Type="System.Boolean">false</IsContractField>
+            </Field>
+          </Inserts>
+        </Fields>
+      </Updates>
+    </BusinessObject>
+  </Updates>
+</BusinessObjects>
+      <Triggers Seq="1496" DbRevision="671">
+  <Inserts>
+    <Trigger FRS_ID="XSC_ChangeEmailLink" CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef" ObjectType="Journal#Email">
+      <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+      <TriggerEvent CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef+Event">UpdateField, InitializeField</TriggerEvent>
+      <ActionType CLR_Type="System.String">SearchAndLink</ActionType>
+      <ObjectId nil="true" CLR_Type="System.String" />
+      <TriggerConditions AggregateType="List">
+        <TriggerCondition AggregateType="Object" FRS_Index="0">
+          <FieldName CLR_Type="System.String">ParentLink_RecID</FieldName>
+          <Type CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleTriggerConditionType">Changed</Type>
+          <FromValue />
+          <ToValue />
+        </TriggerCondition>
+      </TriggerConditions>
+      <OtherTableRef nil="true" CLR_Type="System.String" />
+      <RelationshipTag nil="true" CLR_Type="System.String" />
+      <Disable CLR_Type="System.Boolean">false</Disable>
+      <ActionDefinition AggregateType="Object" ObjectType="Journal#Email" DisplayName="XSC_ChangeEmailLink">
+        <ChildTableRef CLR_Type="System.String">Change#</ChildTableRef>
+        <RelationshipTag CLR_Type="System.String"></RelationshipTag>
+        <SearchQueries AggregateType="List" CLR_Name="SearchQuery">
+          <SearchQuery AggregateType="Object" FRS_Index="0" ObjectType="Change#">
+            <ObjectId CLR_Type="System.String">Change#</ObjectId>
+            <ObjectDisplay CLR_Type="System.String">Change</ObjectDisplay>
+            <JoinRule CLR_Type="System.String">AND</JoinRule>
+            <Condition CLR_Type="System.String">=</Condition>
+            <ConditionType CLR_Type="MetaDataDefinition.Revisions.R1.SearchConditionType">ByField</ConditionType>
+            <FieldName CLR_Type="System.String">RecId</FieldName>
+            <FieldDisplay CLR_Type="System.String">RecId</FieldDisplay>
+            <FieldAlias nil="true" CLR_Type="System.String" />
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldValue CLR_Type="System.String">$(ParentLink_RecID)</FieldValue>
+            <FieldValueDisplay CLR_Type="System.String">$(ParentLink_RecID)</FieldValueDisplay>
+            <FieldValueBehavior CLR_Type="System.String">single</FieldValueBehavior>
+            <FieldStartValue nil="true" CLR_Type="System.String" />
+            <FieldEndValue nil="true" CLR_Type="System.String" />
+            <BracketLevel CLR_Type="System.Int32">0</BracketLevel>
+            <IsClosingBracket CLR_Type="System.Boolean">false</IsClosingBracket>
+            <IsRelatedObjectQuery CLR_Type="System.Boolean">false</IsRelatedObjectQuery>
+            <RelatedObjectId CLR_Type="System.String"></RelatedObjectId>
+            <RelatedObjectDisplay CLR_Type="System.String"></RelatedObjectDisplay>
+            <RelatedObjectOp CLR_Type="System.String"></RelatedObjectOp>
+            <RelatedObjectCount CLR_Type="System.Int32">1</RelatedObjectCount>
+            <RelatedObjects AggregateType="List">
+              <RelatedObject AggregateType="Object" FRS_Index="0">
+                <ID CLR_Type="System.String">Change#</ID>
+                <ObjectId CLR_Type="System.String">Change#</ObjectId>
+                <Name CLR_Type="System.String">Change</Name>
+                <Style CLR_Type="System.String">master</Style>
+                <ThereCardinality CLR_Type="System.String"></ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="1">
+                <ID CLR_Type="System.String">Journal#.</ID>
+                <ObjectId CLR_Type="System.String">Journal#</ObjectId>
+                <Name CLR_Type="System.String">Activity History via ChangeContainsJournal (0...1 : N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="2">
+                <ID CLR_Type="System.String">Announcement#.</ID>
+                <ObjectId CLR_Type="System.String">Announcement#</ObjectId>
+                <Name CLR_Type="System.String">Announcement via AnnouncementAssociatesChange (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="3">
+                <ID CLR_Type="System.String">FRS_Approval#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Approval#</ObjectId>
+                <Name CLR_Type="System.String">Approval via ChangeAssociatedFRS_Approval (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="4">
+                <ID CLR_Type="System.String">Attachment#.</ID>
+                <ObjectId CLR_Type="System.String">Attachment#</ObjectId>
+                <Name CLR_Type="System.String">Attachment via ChangeContainsAttachment (0...1 : N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="5">
+                <ID CLR_Type="System.String">Audit_Change#.</ID>
+                <ObjectId CLR_Type="System.String">Audit_Change#</ObjectId>
+                <Name CLR_Type="System.String">Audit_Change via AuditHistoryRelationship (1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="6">
+                <ID CLR_Type="System.String">FRS_Baseline#.ChangeAssocFRS_Baseline</ID>
+                <ObjectId CLR_Type="System.String">FRS_Baseline#</ObjectId>
+                <Name CLR_Type="System.String">Baseline via ChangeAssocFRS_Baseline (1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="7">
+                <ID CLR_Type="System.String">CABSettings#.</ID>
+                <ObjectId CLR_Type="System.String">CABSettings#</ObjectId>
+                <Name CLR_Type="System.String">CABSettings via ChangeAssocCABSettings (0...1 : 1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="8">
+                <ID CLR_Type="System.String">Frs_CalendarItem#.CalendarItem</ID>
+                <ObjectId CLR_Type="System.String">Frs_CalendarItem#</ObjectId>
+                <Name CLR_Type="System.String">Calendar Item via ChangeAssocFrs_CalendarItem (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="9">
+                <ID CLR_Type="System.String">ChangeDetail#.</ID>
+                <ObjectId CLR_Type="System.String">ChangeDetail#</ObjectId>
+                <Name CLR_Type="System.String">ChangeDetail via ChangeAssociatedChangeDetail (0...1 : 1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="10">
+                <ID CLR_Type="System.String">CI#.</ID>
+                <ObjectId CLR_Type="System.String">CI#</ObjectId>
+                <Name CLR_Type="System.String">CI via ChangeAssociatedCI (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="11">
+                <ID CLR_Type="System.String">CI#.Active</ID>
+                <ObjectId CLR_Type="System.String">CI#</ObjectId>
+                <Name CLR_Type="System.String">CI via CIAssociatedActiveChange (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="12">
+                <ID CLR_Type="System.String">ContactGroup#.</ID>
+                <ObjectId CLR_Type="System.String">ContactGroup#</ObjectId>
+                <Name CLR_Type="System.String">Contact Group via ChangeAssociatesContactGroup (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="13">
+                <ID CLR_Type="System.String">Employee#.Rev2</ID>
+                <ObjectId CLR_Type="System.String">Employee#</ObjectId>
+                <Name CLR_Type="System.String">Employee via ChangeAssocProfileEmployee (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="14">
+                <ID CLR_Type="System.String">Employee#.owner</ID>
+                <ObjectId CLR_Type="System.String">Employee#</ObjectId>
+                <Name CLR_Type="System.String">Employee via ChangeOwnerEmployee (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="15">
+                <ID CLR_Type="System.String">Employee#.</ID>
+                <ObjectId CLR_Type="System.String">Employee#</ObjectId>
+                <Name CLR_Type="System.String">Employee via EmployeeAssociatesChangeAsCAB (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="16">
+                <ID CLR_Type="System.String">FAQ#.</ID>
+                <ObjectId CLR_Type="System.String">FAQ#</ObjectId>
+                <Name CLR_Type="System.String">FAQ via FAQAssociatedChange (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="17">
+                <ID CLR_Type="System.String">Incident#.</ID>
+                <ObjectId CLR_Type="System.String">Incident#</ObjectId>
+                <Name CLR_Type="System.String">Incident via IncidentAssociatesChange (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="18">
+                <ID CLR_Type="System.String">Frs_ITFM_Transaction#.CostItem</ID>
+                <ObjectId CLR_Type="System.String">Frs_ITFM_Transaction#</ObjectId>
+                <Name CLR_Type="System.String">ITFM Cost Item via ChangeAssocFrs_ITFM_Transaction (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="19">
+                <ID CLR_Type="System.String">FRS_MyItem#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_MyItem#</ObjectId>
+                <Name CLR_Type="System.String">My Item via ChangeAssociatedFRS_MyItem (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="20">
+                <ID CLR_Type="System.String">MyShelfItem#.shelftochange</ID>
+                <ObjectId CLR_Type="System.String">MyShelfItem#</ObjectId>
+                <Name CLR_Type="System.String">My Shelf Item via MyShelfItemAssocChange (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="21">
+                <ID CLR_Type="System.String">PIR#.</ID>
+                <ObjectId CLR_Type="System.String">PIR#</ObjectId>
+                <Name CLR_Type="System.String">PIR via ChangeAssociatedPIR (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="22">
+                <ID CLR_Type="System.String">PlannedCI#.</ID>
+                <ObjectId CLR_Type="System.String">PlannedCI#</ObjectId>
+                <Name CLR_Type="System.String">Planned CI via PlannedCIAssociatedChange (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="23">
+                <ID CLR_Type="System.String">Problem#.</ID>
+                <ObjectId CLR_Type="System.String">Problem#</ObjectId>
+                <Name CLR_Type="System.String">Problem via ProblemAssociatesChange (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="24">
+                <ID CLR_Type="System.String">Frs_Project#.ProjectChange</ID>
+                <ObjectId CLR_Type="System.String">Frs_Project#</ObjectId>
+                <Name CLR_Type="System.String">Project via Frs_ProjectAssocChange (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="25">
+                <ID CLR_Type="System.String">Frs_Project#.ProjectInitiatedChange</ID>
+                <ObjectId CLR_Type="System.String">Frs_Project#</ObjectId>
+                <Name CLR_Type="System.String">Project via Frs_ProjectAssocProjectChange (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="26">
+                <ID CLR_Type="System.String">FRS_ReleasePackage#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_ReleasePackage#</ObjectId>
+                <Name CLR_Type="System.String">Release Package via ChangeAssociatedFRS_ReleasePackage (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="27">
+                <ID CLR_Type="System.String">ReleaseProject#.</ID>
+                <ObjectId CLR_Type="System.String">ReleaseProject#</ObjectId>
+                <Name CLR_Type="System.String">Release via ChangeAssociatedReleaseProject (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="28">
+                <ID CLR_Type="System.String">FRS_RiskAnswer#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_RiskAnswer#</ObjectId>
+                <Name CLR_Type="System.String">Risk Answer via ChangeAssocFRS_RiskAnswer (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="29">
+                <ID CLR_Type="System.String">FRS_RiskCatalog#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_RiskCatalog#</ObjectId>
+                <Name CLR_Type="System.String">Risk Catalog via ChangeAssocFRS_RiskCatalog (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="30">
+                <ID CLR_Type="System.String">ServiceReq#.</ID>
+                <ObjectId CLR_Type="System.String">ServiceReq#</ObjectId>
+                <Name CLR_Type="System.String">Service Request via ServiceReqAssociatedChange (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="31">
+                <ID CLR_Type="System.String">SocialFeeds#.SocialFeedsAssocChange</ID>
+                <ObjectId CLR_Type="System.String">SocialFeeds#</ObjectId>
+                <Name CLR_Type="System.String">Social Feeds via SocialFeedsAssocChange (0...N : 0...M)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="32">
+                <ID CLR_Type="System.String">SoftwareAction#.</ID>
+                <ObjectId CLR_Type="System.String">SoftwareAction#</ObjectId>
+                <Name CLR_Type="System.String">Software Action via ChangeAssociatedSoftwareAction (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="33">
+                <ID CLR_Type="System.String">Task#.</ID>
+                <ObjectId CLR_Type="System.String">Task#</ObjectId>
+                <Name CLR_Type="System.String">Task group via ChangeContainsTask (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="34">
+                <ID CLR_Type="System.String">Frs_data_Variance#.Frs_data_VarianceAssocChange</ID>
+                <ObjectId CLR_Type="System.String">Frs_data_Variance#</ObjectId>
+                <Name CLR_Type="System.String">Variance via Frs_data_VarianceAssocChange (0...1 : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="35">
+                <ID CLR_Type="System.String">Frs_data_workflow_instance#.</ID>
+                <ObjectId CLR_Type="System.String">Frs_data_workflow_instance#</ObjectId>
+                <Name CLR_Type="System.String">Workflow Instance via ChangeAssociatedWorkflowInstance (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+            </RelatedObjects>
+            <RelatedRelatedObjects nil="true" />
+            <MasterObjectId CLR_Type="System.String">Change#</MasterObjectId>
+            <IsRelatedObjectCondition CLR_Type="System.Boolean">false</IsRelatedObjectCondition>
+            <SubQueries nil="true" CLR_Name="SubQuery" />
+          </SearchQuery>
+        </SearchQueries>
+        <ActionType CLR_Type="System.String">SearchAndLink</ActionType>
+        <CreatedBy CLR_Type="System.String">HEATAdmin</CreatedBy>
+        <CreatedDateTime CLR_Type="System.DateTime">2021-09-09T07:26:00.363Z</CreatedDateTime>
+        <Description nil="true" CLR_Type="System.String" />
+        <DisabledExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <ExecConfirm CLR_Type="System.Boolean">false</ExecConfirm>
+        <ExecConfirmMsg nil="true" CLR_Type="System.String" />
+        <GroupName nil="true" CLR_Type="System.String" />
+        <HiddenExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+        <Id CLR_Type="System.String">3e725c1a-c3bd-4900-87e7-e2ed24ab3c05</Id>
+        <IsDisabled CLR_Type="System.Boolean">false</IsDisabled>
+        <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+        <LastModified CLR_Type="System.DateTime">0001-01-01T00:00:00</LastModified>
+        <TenantMetaRevision CLR_Type="System.Int32">0</TenantMetaRevision>
+        <ModifiedBy nil="true" CLR_Type="System.String" />
+        <Name CLR_Type="System.String">XSC_ChangeEmailLink</Name>
+        <OwnerId nil="true" CLR_Type="System.String" />
+        <Permissions />
+        <RoleScopes nil="true" />
+        <ShouldSave CLR_Type="System.Boolean">false</ShouldSave>
+        <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+        <Revision nil="true" CLR_Type="System.String" />
+      </ActionDefinition>
+      <Name CLR_Type="System.String">XSC_ChangeEmailLink</Name>
+      <Description CLR_Type="System.String"></Description>
+      <ConditionalExpression AggregateType="Object" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" ObjectType="Journal#Email">
+        <ExpressionPrettyText CLR_Type="System.String"><![CDATA[$(nvl(ParentLink_RecID,  "") != "" && Category == "Incoming Email" &&&#x13;&#x10;  ParentLink_Category == "Change")]]></ExpressionPrettyText>
+        <Description nil="true" CLR_Type="System.String" />
+        <FieldRefs AggregateType="List">
+          <FieldRef CLR_Type="System.String" FRS_Index="0">ParentLink_RecID</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="1">Category</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="2">ParentLink_Category</FieldRef>
+        </FieldRefs>
+        <IsFullExpression CLR_Type="System.Boolean">false</IsFullExpression>
+        <Name nil="true" CLR_Type="System.String" />
+        <Tree AggregateType="Object">
+          <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">And</Op>
+          <Left AggregateType="Object">
+            <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">And</Op>
+            <Left AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">NotEqual</Op>
+              <Left AggregateType="Object">
+                <Arguments AggregateType="List">
+                  <Argument AggregateType="Object" FRS_Index="0">
+                    <FieldIndex CLR_Type="System.Int32">0</FieldIndex>
+                    <Details AggregateType="Object">
+                      <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                      <Selector CLR_Type="System.String">ParentLink_RecID</Selector>
+                      <SubSelector nil="true" CLR_Type="System.String" />
+                      <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                      <Qualifiers nil="true" />
+                      <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                    </Details>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+                  </Argument>
+                  <Argument AggregateType="Object" FRS_Index="1">
+                    <Value CLR_Type="System.String"></Value>
+                    <LongImage nil="true" CLR_Type="System.String" />
+                    <IsHex CLR_Type="System.Boolean">false</IsHex>
+                    <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+                  </Argument>
+                </Arguments>
+                <FunctionName CLR_Type="System.String">nvl</FunctionName>
+                <IsMethod CLR_Type="System.Boolean">false</IsMethod>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Function</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.String"></Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Left>
+            <Right AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+              <Left AggregateType="Object">
+                <FieldIndex CLR_Type="System.Int32">1</FieldIndex>
+                <Details AggregateType="Object">
+                  <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                  <Selector CLR_Type="System.String">Category</Selector>
+                  <SubSelector nil="true" CLR_Type="System.String" />
+                  <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                  <Qualifiers nil="true" />
+                  <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                </Details>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.String">Incoming Email</Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Right>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+          </Left>
+          <Right AggregateType="Object">
+            <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+            <Left AggregateType="Object">
+              <FieldIndex CLR_Type="System.Int32">2</FieldIndex>
+              <Details AggregateType="Object">
+                <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                <Selector CLR_Type="System.String">ParentLink_Category</Selector>
+                <SubSelector nil="true" CLR_Type="System.String" />
+                <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                <Qualifiers nil="true" />
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+              </Details>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+            </Left>
+            <Right AggregateType="Object">
+              <Value CLR_Type="System.String">Change</Value>
+              <LongImage nil="true" CLR_Type="System.String" />
+              <IsHex CLR_Type="System.Boolean">false</IsHex>
+              <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+            </Right>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+          </Right>
+          <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+        </Tree>
+        <ValidationStatus CLR_Type="MetaDataDefinition.Revisions.R1.ReadOnly.ExpressionValidationStatus">Ok</ValidationStatus>
+      </ConditionalExpression>
+      <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+    </Trigger>
+  </Inserts>
+</Triggers>
+      <Triggers Seq="1497" DbRevision="671">
+  <Inserts>
+    <Trigger FRS_ID="XSC Change Initial Email Set to Read" CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef" ObjectType="Journal#Email">
+      <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+      <TriggerEvent CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef+Event">Link</TriggerEvent>
+      <ActionType CLR_Type="System.String">UpdateObject</ActionType>
+      <ObjectId nil="true" CLR_Type="System.String" />
+      <TriggerConditions AggregateType="List" />
+      <OtherTableRef CLR_Type="System.String">Change#</OtherTableRef>
+      <RelationshipTag CLR_Type="System.String"></RelationshipTag>
+      <Disable CLR_Type="System.Boolean">false</Disable>
+      <ActionDefinition AggregateType="Object" ObjectType="Journal#Email" DisplayName="XSC Change Initial Email Set to Read">
+        <FieldValues AggregateType="List">
+          <FieldValue AggregateType="Object" FRS_ID="AttachmentData" FRS_Index="0" DisplayName="AttachmentData">
+            <DisplayName CLR_Type="System.String">AttachmentData</DisplayName>
+            <DisplayAs CLR_Type="System.String">AttachmentData</DisplayAs>
+            <FieldName CLR_Type="System.String">AttachmentData</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">binary</FieldType>
+            <FieldLength CLR_Type="System.Int32">-1</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="AttachmentExtension" FRS_Index="1" DisplayName="AttachmentExtension">
+            <DisplayName CLR_Type="System.String">AttachmentExtension</DisplayName>
+            <DisplayAs CLR_Type="System.String">AttachmentExtension</DisplayAs>
+            <FieldName CLR_Type="System.String">AttachmentExtension</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="AttachmentName" FRS_Index="2" DisplayName="AttachmentName">
+            <DisplayName CLR_Type="System.String">AttachmentName</DisplayName>
+            <DisplayAs CLR_Type="System.String">AttachmentName</DisplayAs>
+            <FieldName CLR_Type="System.String">AttachmentName</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="BCCAddrList" FRS_Index="3" DisplayName="BCCAddrList">
+            <DisplayName CLR_Type="System.String">BCC Address List</DisplayName>
+            <DisplayAs CLR_Type="System.String">BCCAddrList (BCC Address List)</DisplayAs>
+            <FieldName CLR_Type="System.String">BCCAddrList</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">320</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_BodyPlain" FRS_Index="4" DisplayName="XSC_BodyPlain">
+            <DisplayName CLR_Type="System.String">Body Plain</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_BodyPlain (Body Plain)</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_BodyPlain</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">text</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="CalculatedCategory" FRS_Index="5" DisplayName="CalculatedCategory">
+            <DisplayName CLR_Type="System.String">CalculatedCategory</DisplayName>
+            <DisplayAs CLR_Type="System.String">CalculatedCategory</DisplayAs>
+            <FieldName CLR_Type="System.String">CalculatedCategory</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">100</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="Category" FRS_Index="6" DisplayName="Category">
+            <DisplayName CLR_Type="System.String">Category</DisplayName>
+            <DisplayAs CLR_Type="System.String">Category</DisplayAs>
+            <FieldName CLR_Type="System.String">Category</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">list</FieldType>
+            <FieldLength CLR_Type="System.Int32">60</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="Category_Valid" FRS_Index="7" DisplayName="Category_Valid">
+            <DisplayName CLR_Type="System.String">Category_Valid</DisplayName>
+            <DisplayAs CLR_Type="System.String">Category_Valid</DisplayAs>
+            <FieldName CLR_Type="System.String">Category_Valid</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="CCAddrList" FRS_Index="8" DisplayName="CCAddrList">
+            <DisplayName CLR_Type="System.String">CC Address List</DisplayName>
+            <DisplayAs CLR_Type="System.String">CCAddrList (CC Address List)</DisplayAs>
+            <FieldName CLR_Type="System.String">CCAddrList</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">320</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="CreatedBy" FRS_Index="9" DisplayName="CreatedBy">
+            <DisplayName CLR_Type="System.String">Created By</DisplayName>
+            <DisplayAs CLR_Type="System.String">CreatedBy (Created By)</DisplayAs>
+            <FieldName CLR_Type="System.String">CreatedBy</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">100</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="CreatedDateTime" FRS_Index="10" DisplayName="CreatedDateTime">
+            <DisplayName CLR_Type="System.String">CreatedDateTime</DisplayName>
+            <DisplayAs CLR_Type="System.String">CreatedDateTime</DisplayAs>
+            <FieldName CLR_Type="System.String">CreatedDateTime</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">datetime</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="EmailBody" FRS_Index="11" DisplayName="EmailBody">
+            <DisplayName CLR_Type="System.String">Email Body</DisplayName>
+            <DisplayAs CLR_Type="System.String">EmailBody (Email Body)</DisplayAs>
+            <FieldName CLR_Type="System.String">EmailBody</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">text</FieldType>
+            <FieldLength CLR_Type="System.Int32">4000</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="EmailBodyType" FRS_Index="12" DisplayName="EmailBodyType">
+            <DisplayName CLR_Type="System.String">EmailBodyType</DisplayName>
+            <DisplayAs CLR_Type="System.String">EmailBodyType</DisplayAs>
+            <FieldName CLR_Type="System.String">EmailBodyType</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">20</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_ExternalTicketType" FRS_Index="13" DisplayName="XSC_ExternalTicketType">
+            <DisplayName CLR_Type="System.String">External Ticket Type</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_ExternalTicketType (External Ticket Type)</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_ExternalTicketType</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">128</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_ExternalTicketID" FRS_Index="14" DisplayName="XSC_ExternalTicketID">
+            <DisplayName CLR_Type="System.String">External TicketI D</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_ExternalTicketID (External TicketI D)</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_ExternalTicketID</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">128</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="FromDN" FRS_Index="15" DisplayName="FromDN">
+            <DisplayName CLR_Type="System.String">From Display Name</DisplayName>
+            <DisplayAs CLR_Type="System.String">FromDN (From Display Name)</DisplayAs>
+            <FieldName CLR_Type="System.String">FromDN</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">256</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="FromAddr" FRS_Index="16" DisplayName="FromAddr">
+            <DisplayName CLR_Type="System.String">From Email Id</DisplayName>
+            <DisplayAs CLR_Type="System.String">FromAddr (From Email Id)</DisplayAs>
+            <FieldName CLR_Type="System.String">FromAddr</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">320</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="HasAttachments" FRS_Index="17" DisplayName="HasAttachments">
+            <DisplayName CLR_Type="System.String">Has Attachments</DisplayName>
+            <DisplayAs CLR_Type="System.String">HasAttachments (Has Attachments)</DisplayAs>
+            <FieldName CLR_Type="System.String">HasAttachments</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="Incoming" FRS_Index="18" DisplayName="Incoming">
+            <DisplayName CLR_Type="System.String">Incoming</DisplayName>
+            <DisplayAs CLR_Type="System.String">Incoming</DisplayAs>
+            <FieldName CLR_Type="System.String">Incoming</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_InitialOwnerExists" FRS_Index="19" DisplayName="XSC_InitialOwnerExists">
+            <DisplayName CLR_Type="System.String">Initial Owner Exists</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_InitialOwnerExists (Initial Owner Exists)</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_InitialOwnerExists</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_InternalTicketID" FRS_Index="20" DisplayName="XSC_InternalTicketID">
+            <DisplayName CLR_Type="System.String">Internal Ticket ID</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_InternalTicketID (Internal Ticket ID)</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_InternalTicketID</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">128</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_InternalTicketType" FRS_Index="21" DisplayName="XSC_InternalTicketType">
+            <DisplayName CLR_Type="System.String">Internal Ticket Type</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_InternalTicketType (Internal Ticket Type)</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_InternalTicketType</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">128</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="IsNewRecord" FRS_Index="22" DisplayName="IsNewRecord">
+            <DisplayName CLR_Type="System.String">Is New Record</DisplayName>
+            <DisplayAs CLR_Type="System.String">IsNewRecord (Is New Record)</DisplayAs>
+            <FieldName CLR_Type="System.String">IsNewRecord</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="IsAutoGenerated" FRS_Index="23" DisplayName="IsAutoGenerated">
+            <DisplayName CLR_Type="System.String">IsAutoGenerated</DisplayName>
+            <DisplayAs CLR_Type="System.String">IsAutoGenerated</DisplayAs>
+            <FieldName CLR_Type="System.String">IsAutoGenerated</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="IsUnRead" FRS_Index="24" DisplayName="IsUnRead">
+            <DisplayName CLR_Type="System.String">IsUnRead</DisplayName>
+            <DisplayAs CLR_Type="System.String">IsUnRead</DisplayAs>
+            <FieldName CLR_Type="System.String">IsUnRead</FieldName>
+            <ExpressionText CLR_Type="System.String">False</ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">true</Overwrite>
+            <Expression AggregateType="Object" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" ObjectType="Journal#Email" ExpressionType="System.Boolean">
+              <Description nil="true" CLR_Type="System.String" />
+              <FieldRefs AggregateType="List" />
+              <IsFullExpression CLR_Type="System.Boolean">false</IsFullExpression>
+              <Name nil="true" CLR_Type="System.String" />
+              <Tree AggregateType="Object">
+                <Value CLR_Type="System.Boolean">false</Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Tree>
+              <ValidationStatus CLR_Type="MetaDataDefinition.Revisions.R1.ReadOnly.ExpressionValidationStatus">Ok</ValidationStatus>
+            </Expression>
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="JournalType" FRS_Index="25" DisplayName="JournalType">
+            <DisplayName CLR_Type="System.String">Journal Type</DisplayName>
+            <DisplayAs CLR_Type="System.String">JournalType (Journal Type)</DisplayAs>
+            <FieldName CLR_Type="System.String">JournalType</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">list</FieldType>
+            <FieldLength CLR_Type="System.Int32">30</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="JournalType_Valid" FRS_Index="26" DisplayName="JournalType_Valid">
+            <DisplayName CLR_Type="System.String">JournalType_Valid</DisplayName>
+            <DisplayAs CLR_Type="System.String">JournalType_Valid</DisplayAs>
+            <FieldName CLR_Type="System.String">JournalType_Valid</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="LastSendMailError" FRS_Index="27" DisplayName="LastSendMailError">
+            <DisplayName CLR_Type="System.String">Last Error</DisplayName>
+            <DisplayAs CLR_Type="System.String">LastSendMailError (Last Error)</DisplayAs>
+            <FieldName CLR_Type="System.String">LastSendMailError</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">text</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="LastSendMailErrorAdmin" FRS_Index="28" DisplayName="LastSendMailErrorAdmin">
+            <DisplayName CLR_Type="System.String">Last Error (Details)</DisplayName>
+            <DisplayAs CLR_Type="System.String">LastSendMailErrorAdmin (Last Error (Details))</DisplayAs>
+            <FieldName CLR_Type="System.String">LastSendMailErrorAdmin</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">text</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="MessageId" FRS_Index="29" DisplayName="MessageId">
+            <DisplayName CLR_Type="System.String">Message ID</DisplayName>
+            <DisplayAs CLR_Type="System.String">MessageId (Message ID)</DisplayAs>
+            <FieldName CLR_Type="System.String">MessageId</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">255</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="LastModBy" FRS_Index="30" DisplayName="LastModBy">
+            <DisplayName CLR_Type="System.String">Modified By</DisplayName>
+            <DisplayAs CLR_Type="System.String">LastModBy (Modified By)</DisplayAs>
+            <FieldName CLR_Type="System.String">LastModBy</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">100</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="LastModDateTime" FRS_Index="31" DisplayName="LastModDateTime">
+            <DisplayName CLR_Type="System.String">Modified On</DisplayName>
+            <DisplayAs CLR_Type="System.String">LastModDateTime (Modified On)</DisplayAs>
+            <FieldName CLR_Type="System.String">LastModDateTime</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">datetime</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="Owner" FRS_Index="32" DisplayName="Owner">
+            <DisplayName CLR_Type="System.String">Owner</DisplayName>
+            <DisplayAs CLR_Type="System.String">Owner</DisplayAs>
+            <FieldName CLR_Type="System.String">Owner</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">list</FieldType>
+            <FieldLength CLR_Type="System.Int32">100</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="OwnerTeam" FRS_Index="33" DisplayName="OwnerTeam">
+            <DisplayName CLR_Type="System.String">Owner Team</DisplayName>
+            <DisplayAs CLR_Type="System.String">OwnerTeam (Owner Team)</DisplayAs>
+            <FieldName CLR_Type="System.String">OwnerTeam</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">list</FieldType>
+            <FieldLength CLR_Type="System.Int32">100</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="Owner_Valid" FRS_Index="34" DisplayName="Owner_Valid">
+            <DisplayName CLR_Type="System.String">Owner_Valid</DisplayName>
+            <DisplayAs CLR_Type="System.String">Owner_Valid</DisplayAs>
+            <FieldName CLR_Type="System.String">Owner_Valid</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="OwnerTeam_Valid" FRS_Index="35" DisplayName="OwnerTeam_Valid">
+            <DisplayName CLR_Type="System.String">OwnerTeam_Valid</DisplayName>
+            <DisplayAs CLR_Type="System.String">OwnerTeam_Valid</DisplayAs>
+            <FieldName CLR_Type="System.String">OwnerTeam_Valid</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="OwnerType" FRS_Index="36" DisplayName="OwnerType">
+            <DisplayName CLR_Type="System.String">OwnerType</DisplayName>
+            <DisplayAs CLR_Type="System.String">OwnerType</DisplayAs>
+            <FieldName CLR_Type="System.String">OwnerType</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">30</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="ParentOwner" FRS_Index="37" DisplayName="ParentOwner">
+            <DisplayName CLR_Type="System.String">Parent Owner</DisplayName>
+            <DisplayAs CLR_Type="System.String">ParentOwner (Parent Owner)</DisplayAs>
+            <FieldName CLR_Type="System.String">ParentOwner</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">60</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="ParentLink_RecID" FRS_Index="38" DisplayName="ParentLink_RecID">
+            <DisplayName CLR_Type="System.String">ParentLink_RecID</DisplayName>
+            <DisplayAs CLR_Type="System.String">ParentLink_RecID</DisplayAs>
+            <FieldName CLR_Type="System.String">ParentLink_RecID</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">30</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="ParentLink_Category" FRS_Index="39" DisplayName="ParentLink_Category">
+            <DisplayName CLR_Type="System.String">ParentLink_Category</DisplayName>
+            <DisplayAs CLR_Type="System.String">ParentLink_Category</DisplayAs>
+            <FieldName CLR_Type="System.String">ParentLink_Category</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">100</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="Processed" FRS_Index="40" DisplayName="Processed">
+            <DisplayName CLR_Type="System.String">Processed</DisplayName>
+            <DisplayAs CLR_Type="System.String">Processed</DisplayAs>
+            <FieldName CLR_Type="System.String">Processed</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="PublishToWeb" FRS_Index="41" DisplayName="PublishToWeb">
+            <DisplayName CLR_Type="System.String">Publish To Web</DisplayName>
+            <DisplayAs CLR_Type="System.String">PublishToWeb (Publish To Web)</DisplayAs>
+            <FieldName CLR_Type="System.String">PublishToWeb</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="ReadOnly" FRS_Index="42" DisplayName="ReadOnly">
+            <DisplayName CLR_Type="System.String">ReadOnly</DisplayName>
+            <DisplayAs CLR_Type="System.String">ReadOnly</DisplayAs>
+            <FieldName CLR_Type="System.String">ReadOnly</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="RecId" FRS_Index="43" DisplayName="RecId">
+            <DisplayName CLR_Type="System.String">RecId</DisplayName>
+            <DisplayAs CLR_Type="System.String">RecId</DisplayAs>
+            <FieldName CLR_Type="System.String">RecId</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="SendMailAttempts" FRS_Index="44" DisplayName="SendMailAttempts">
+            <DisplayName CLR_Type="System.String">Send Attempts</DisplayName>
+            <DisplayAs CLR_Type="System.String">SendMailAttempts (Send Attempts)</DisplayAs>
+            <FieldName CLR_Type="System.String">SendMailAttempts</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">number</FieldType>
+            <FieldLength CLR_Type="System.Int32">4</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="MessageSent" FRS_Index="45" DisplayName="MessageSent">
+            <DisplayName CLR_Type="System.String">Sent</DisplayName>
+            <DisplayAs CLR_Type="System.String">MessageSent (Sent)</DisplayAs>
+            <FieldName CLR_Type="System.String">MessageSent</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="SentOn" FRS_Index="46" DisplayName="SentOn">
+            <DisplayName CLR_Type="System.String">Sent On</DisplayName>
+            <DisplayAs CLR_Type="System.String">SentOn (Sent On)</DisplayAs>
+            <FieldName CLR_Type="System.String">SentOn</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">datetime</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="ShowBCC" FRS_Index="47" DisplayName="ShowBCC">
+            <DisplayName CLR_Type="System.String">ShowBCC</DisplayName>
+            <DisplayAs CLR_Type="System.String">ShowBCC</DisplayAs>
+            <FieldName CLR_Type="System.String">ShowBCC</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="ShowCC" FRS_Index="48" DisplayName="ShowCC">
+            <DisplayName CLR_Type="System.String">ShowCC</DisplayName>
+            <DisplayAs CLR_Type="System.String">ShowCC</DisplayAs>
+            <FieldName CLR_Type="System.String">ShowCC</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_Spam" FRS_Index="49" DisplayName="XSC_Spam">
+            <DisplayName CLR_Type="System.String">Spam</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_Spam (Spam)</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_Spam</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="Subject" FRS_Index="50" DisplayName="Subject">
+            <DisplayName CLR_Type="System.String">Subject</DisplayName>
+            <DisplayAs CLR_Type="System.String">Subject</DisplayAs>
+            <FieldName CLR_Type="System.String">Subject</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">255</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="ToAddrList" FRS_Index="51" DisplayName="ToAddrList">
+            <DisplayName CLR_Type="System.String">To Address List</DisplayName>
+            <DisplayAs CLR_Type="System.String">ToAddrList (To Address List)</DisplayAs>
+            <FieldName CLR_Type="System.String">ToAddrList</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">320</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="TypeAlias" FRS_Index="52" DisplayName="TypeAlias">
+            <DisplayName CLR_Type="System.String">TypeAlias</DisplayName>
+            <DisplayAs CLR_Type="System.String">TypeAlias</DisplayAs>
+            <FieldName CLR_Type="System.String">TypeAlias</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">80</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="UnreadTransition" FRS_Index="53" DisplayName="UnreadTransition">
+            <DisplayName CLR_Type="System.String">UnreadTransition</DisplayName>
+            <DisplayAs CLR_Type="System.String">UnreadTransition</DisplayAs>
+            <FieldName CLR_Type="System.String">UnreadTransition</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">boolean</FieldType>
+            <FieldLength CLR_Type="System.Int32">0</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_CreateDateTime" FRS_Index="54" DisplayName="XSC_CreateDateTime">
+            <DisplayName CLR_Type="System.String">XSC_CreateDateTime</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_CreateDateTime</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_CreateDateTime</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+          <FieldValue AggregateType="Object" FRS_ID="XSC_CreatedDateTimeLocal" FRS_Index="55" DisplayName="XSC_CreatedDateTimeLocal">
+            <DisplayName CLR_Type="System.String">XSC_CreatedDateTimeLocal</DisplayName>
+            <DisplayAs CLR_Type="System.String">XSC_CreatedDateTimeLocal</DisplayAs>
+            <FieldName CLR_Type="System.String">XSC_CreatedDateTimeLocal</FieldName>
+            <ExpressionText CLR_Type="System.String"></ExpressionText>
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldLength CLR_Type="System.Int32">32</FieldLength>
+            <Overwrite CLR_Type="System.Boolean">false</Overwrite>
+            <Expression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+            <IsHtml CLR_Type="System.Boolean">false</IsHtml>
+          </FieldValue>
+        </FieldValues>
+        <RelationshipPath nil="true" CLR_Type="System.String" />
+        <ChildTableRef nil="true" CLR_Type="System.String" />
+        <ActionType CLR_Type="System.String">UpdateObject</ActionType>
+        <CreatedBy CLR_Type="System.String">HEATAdmin</CreatedBy>
+        <CreatedDateTime CLR_Type="System.DateTime">2021-09-09T07:27:09.483Z</CreatedDateTime>
+        <Description nil="true" CLR_Type="System.String" />
+        <DisabledExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <ExecConfirm CLR_Type="System.Boolean">false</ExecConfirm>
+        <ExecConfirmMsg nil="true" CLR_Type="System.String" />
+        <GroupName nil="true" CLR_Type="System.String" />
+        <HiddenExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+        <Id CLR_Type="System.String">32635351-fd14-40ea-9ba1-3f13893603e7</Id>
+        <IsDisabled CLR_Type="System.Boolean">false</IsDisabled>
+        <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+        <LastModified CLR_Type="System.DateTime">0001-01-01T00:00:00</LastModified>
+        <TenantMetaRevision CLR_Type="System.Int32">0</TenantMetaRevision>
+        <ModifiedBy nil="true" CLR_Type="System.String" />
+        <Name CLR_Type="System.String">XSC Change Initial Email Set to Read</Name>
+        <OwnerId nil="true" CLR_Type="System.String" />
+        <Permissions />
+        <RoleScopes nil="true" />
+        <ShouldSave CLR_Type="System.Boolean">false</ShouldSave>
+        <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+        <Revision nil="true" CLR_Type="System.String" />
+      </ActionDefinition>
+      <Name CLR_Type="System.String">XSC Change Initial Email Set to Read</Name>
+      <Description CLR_Type="System.String"></Description>
+      <ConditionalExpression AggregateType="Object" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" ObjectType="Journal#Email">
+        <ExpressionPrettyText CLR_Type="System.String">$([Change#.]XSC_InitialEmailRecId == RecId)</ExpressionPrettyText>
+        <Description nil="true" CLR_Type="System.String" />
+        <FieldRefs AggregateType="List">
+          <FieldRef CLR_Type="System.String" FRS_Index="0">[Change#.]XSC_InitialEmailRecId</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="1">RecId</FieldRef>
+        </FieldRefs>
+        <IsFullExpression CLR_Type="System.Boolean">false</IsFullExpression>
+        <Name nil="true" CLR_Type="System.String" />
+        <Tree AggregateType="Object">
+          <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+          <Left AggregateType="Object">
+            <FieldIndex CLR_Type="System.Int32">0</FieldIndex>
+            <Details AggregateType="Object">
+              <Container AggregateType="Object">
+                <RelationshipKind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+RelationshipKind">RelatedObject</RelationshipKind>
+                <Context nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                <Constraint nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                <ConstraintType CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ConstraintType">Undefined</ConstraintType>
+                <Field nil="true" CLR_Type="System.String" />
+                <TypeName CLR_Type="System.String">Change</TypeName>
+                <SubtypeName nil="true" CLR_Type="System.String" />
+                <Tag nil="true" CLR_Type="System.String" />
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Relationship</Kind>
+              </Container>
+              <Selector CLR_Type="System.String">XSC_InitialEmailRecId</Selector>
+              <SubSelector nil="true" CLR_Type="System.String" />
+              <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+              <Qualifiers nil="true" />
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+            </Details>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+          </Left>
+          <Right AggregateType="Object">
+            <FieldIndex CLR_Type="System.Int32">1</FieldIndex>
+            <Details AggregateType="Object">
+              <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+              <Selector CLR_Type="System.String">RecId</Selector>
+              <SubSelector nil="true" CLR_Type="System.String" />
+              <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+              <Qualifiers nil="true" />
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+            </Details>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+          </Right>
+          <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+        </Tree>
+        <ValidationStatus CLR_Type="MetaDataDefinition.Revisions.R1.ReadOnly.ExpressionValidationStatus">Ok</ValidationStatus>
+      </ConditionalExpression>
+      <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+    </Trigger>
+  </Inserts>
+</Triggers>
+      <QuickActions Seq="1498" DbRevision="671">
+  <Inserts>
+    <QuickAction FRS_ID="abef9c72-7d07-4e57-a579-eb6e3cc19e97" CLR_Type="MetaDataDefinition.Revisions.R1.UIActionActionMetaData" ObjectType="Journal#Email">
+      <Scope CLR_Type="System.String">ObjectWorkspace</Scope>
+      <CommandId CLR_Type="System.String">NewObject</CommandId>
+      <Confirmation />
+      <CommandData CLR_Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">[ObjectType, Change#][Fields, System.Collections.Generic.List`1[System.Object]]</CommandData>
+      <__ConfirmationText CLR_Type="System.String">null</__ConfirmationText>
+      <__CommandDataText CLR_Type="System.String"><![CDATA[{&#x10;    'ObjectType': 'Change#',&#x10;    'Fields': [&#x10;        {'Name': 'RequestorLink_RecID', 'Value': '$(Owner_Valid)'},&#x10;        {'Name': 'CreatedDateTime', 'Value': '$(XSC_CreatedDateTimeLocal)'},&#x10;        {'Name': 'RequestorLink_Category', 'Value': 'Employee'},&#x10;        {'Name': 'Subject', 'Value': '$(Subject)'},&#x10;        {'Name': 'Description', 'Value': '$(XSC_BodyPlain)'},&#x10;        {'Name': 'XSC_InitialEmailRecId', 'Value': '$(RecId)'},&#x10;        {'Name': 'XSC_ExternalTicketNumber', 'Value': '$(XSC_ExternalTicketID)'},&#x10;    ]&#x10;} ]]></__CommandDataText>
+      <ActionType CLR_Type="System.String">UIAction</ActionType>
+      <CreatedBy CLR_Type="System.String">HEATAdmin</CreatedBy>
+      <CreatedDateTime CLR_Type="System.DateTime">2021-09-09T07:29:40.183Z</CreatedDateTime>
+      <Description CLR_Type="System.String">Creates Change from Email. Customer Field is populated</Description>
+      <DisabledExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+      <ExecConfirm CLR_Type="System.Boolean">false</ExecConfirm>
+      <ExecConfirmMsg CLR_Type="System.String"></ExecConfirmMsg>
+      <GroupName CLR_Type="System.String">Mail Eater</GroupName>
+      <HiddenExpression AggregateType="Object" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData">
+        <Description nil="true" CLR_Type="System.String" />
+        <FieldRefs AggregateType="List">
+          <FieldRef CLR_Type="System.String" FRS_Index="0">ParentLink_Category</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="1">XSC_Spam</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="2">XSC_InitialOwnerExists</FieldRef>
+        </FieldRefs>
+        <IsFullExpression CLR_Type="System.Boolean">true</IsFullExpression>
+        <Name nil="true" CLR_Type="System.String" />
+        <Tree AggregateType="Object">
+          <Condition AggregateType="Object">
+            <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Or</Op>
+            <Left AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">NotEqual</Op>
+              <Left AggregateType="Object">
+                <Arguments AggregateType="List">
+                  <Argument AggregateType="Object" FRS_Index="0">
+                    <FieldIndex CLR_Type="System.Int32">0</FieldIndex>
+                    <Details AggregateType="Object">
+                      <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                      <Selector CLR_Type="System.String">ParentLink_Category</Selector>
+                      <SubSelector nil="true" CLR_Type="System.String" />
+                      <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                      <Qualifiers nil="true" />
+                      <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                    </Details>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+                  </Argument>
+                  <Argument AggregateType="Object" FRS_Index="1">
+                    <Value CLR_Type="System.String"></Value>
+                    <LongImage nil="true" CLR_Type="System.String" />
+                    <IsHex CLR_Type="System.Boolean">false</IsHex>
+                    <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+                  </Argument>
+                </Arguments>
+                <FunctionName CLR_Type="System.String">nvl</FunctionName>
+                <IsMethod CLR_Type="System.Boolean">false</IsMethod>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Function</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.String"></Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Left>
+            <Right AggregateType="Object">
+              <FieldIndex CLR_Type="System.Int32">1</FieldIndex>
+              <Details AggregateType="Object">
+                <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                <Selector CLR_Type="System.String">XSC_Spam</Selector>
+                <SubSelector nil="true" CLR_Type="System.String" />
+                <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                <Qualifiers nil="true" />
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+              </Details>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+            </Right>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+          </Condition>
+          <WhenTrue AggregateType="Object">
+            <Value CLR_Type="System.Boolean">true</Value>
+            <LongImage nil="true" CLR_Type="System.String" />
+            <IsHex CLR_Type="System.Boolean">false</IsHex>
+            <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+          </WhenTrue>
+          <WhenFalse AggregateType="Object">
+            <Condition AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+              <Left AggregateType="Object">
+                <FieldIndex CLR_Type="System.Int32">2</FieldIndex>
+                <Details AggregateType="Object">
+                  <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                  <Selector CLR_Type="System.String">XSC_InitialOwnerExists</Selector>
+                  <SubSelector nil="true" CLR_Type="System.String" />
+                  <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                  <Qualifiers nil="true" />
+                  <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                </Details>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.Boolean">true</Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Condition>
+            <WhenTrue AggregateType="Object">
+              <Value CLR_Type="System.Boolean">false</Value>
+              <LongImage nil="true" CLR_Type="System.String" />
+              <IsHex CLR_Type="System.Boolean">false</IsHex>
+              <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+            </WhenTrue>
+            <WhenFalse AggregateType="Object">
+              <Value CLR_Type="System.Boolean">true</Value>
+              <LongImage nil="true" CLR_Type="System.String" />
+              <IsHex CLR_Type="System.Boolean">false</IsHex>
+              <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+            </WhenFalse>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Condition</Kind>
+          </WhenFalse>
+          <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Condition</Kind>
+        </Tree>
+        <ValidationStatus CLR_Type="MetaDataDefinition.Revisions.R1.ReadOnly.ExpressionValidationStatus">Ok</ValidationStatus>
+      </HiddenExpression>
+      <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+      <Id CLR_Type="System.String">abef9c72-7d07-4e57-a579-eb6e3cc19e97</Id>
+      <IsDisabled CLR_Type="System.Boolean">false</IsDisabled>
+      <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+      <LastModified CLR_Type="System.DateTime">2021-09-09T07:29:40.187Z</LastModified>
+      <TenantMetaRevision CLR_Type="System.Int32">0</TenantMetaRevision>
+      <ModifiedBy CLR_Type="System.String">HEATAdmin</ModifiedBy>
+      <Name CLR_Type="System.String">Create Change (Customer)</Name>
+      <OwnerId CLR_Type="System.String">HEATAdmin</OwnerId>
+      <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+      <RoleScopes AggregateType="List">
+        <RoleScope CLR_Type="System.String" FRS_Index="0">Admin</RoleScope>
+        <RoleScope CLR_Type="System.String" FRS_Index="1">ServiceDeskAnalyst</RoleScope>
+      </RoleScopes>
+      <ShouldSave CLR_Type="System.Boolean">false</ShouldSave>
+      <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+      <Revision CLR_Type="System.String">910DE93538E84CCE878BF0F5F844B2A6D45411C5</Revision>
+    </QuickAction>
+  </Inserts>
+</QuickActions>
+      <QuickActions Seq="1499" DbRevision="671">
+  <Inserts>
+    <QuickAction FRS_ID="426a67a7-d233-4be6-b223-3f8ffd984d00" CLR_Type="MetaDataDefinition.Revisions.R1.UIActionActionMetaData" ObjectType="Journal#Email">
+      <Scope CLR_Type="System.String">ObjectWorkspace</Scope>
+      <CommandId CLR_Type="System.String">NewObject</CommandId>
+      <Confirmation />
+      <CommandData CLR_Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">[ObjectType, Change#][Fields, System.Collections.Generic.List`1[System.Object]]</CommandData>
+      <__ConfirmationText CLR_Type="System.String">null</__ConfirmationText>
+      <__CommandDataText CLR_Type="System.String"><![CDATA[{&#x10;    'ObjectType': 'Change#',&#x10;    'Fields': [&#x10;        {'Name': 'Subject', 'Value': '$(Subject)'},&#x10;{'Name': 'CreatedDateTime', 'Value': '$(XSC_CreatedDateTimeLocal)'},&#x10;        {'Name': 'Description', 'Value': '$(XSC_BodyPlain)'},&#x10;        {'Name': 'XSC_InitialEmailRecId', 'Value': '$(RecId)'},&#x10;        {'Name': 'XSC_ExternalTicketNumber', 'Value': '$(XSC_ExternalTicketID)'},&#x10;    ]&#x10;}]]></__CommandDataText>
+      <ActionType CLR_Type="System.String">UIAction</ActionType>
+      <CreatedBy CLR_Type="System.String">HEATAdmin</CreatedBy>
+      <CreatedDateTime CLR_Type="System.DateTime">2021-09-09T07:30:33.14Z</CreatedDateTime>
+      <Description CLR_Type="System.String">Creates Change from Email. Customer is empty</Description>
+      <DisabledExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+      <ExecConfirm CLR_Type="System.Boolean">false</ExecConfirm>
+      <ExecConfirmMsg CLR_Type="System.String"></ExecConfirmMsg>
+      <GroupName CLR_Type="System.String">Mail Eater</GroupName>
+      <HiddenExpression AggregateType="Object" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData">
+        <Description nil="true" CLR_Type="System.String" />
+        <FieldRefs AggregateType="List">
+          <FieldRef CLR_Type="System.String" FRS_Index="0">ParentLink_Category</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="1">XSC_Spam</FieldRef>
+          <FieldRef CLR_Type="System.String" FRS_Index="2">XSC_InitialOwnerExists</FieldRef>
+        </FieldRefs>
+        <IsFullExpression CLR_Type="System.Boolean">true</IsFullExpression>
+        <Name nil="true" CLR_Type="System.String" />
+        <Tree AggregateType="Object">
+          <Condition AggregateType="Object">
+            <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Or</Op>
+            <Left AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">NotEqual</Op>
+              <Left AggregateType="Object">
+                <Arguments AggregateType="List">
+                  <Argument AggregateType="Object" FRS_Index="0">
+                    <FieldIndex CLR_Type="System.Int32">0</FieldIndex>
+                    <Details AggregateType="Object">
+                      <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                      <Selector CLR_Type="System.String">ParentLink_Category</Selector>
+                      <SubSelector nil="true" CLR_Type="System.String" />
+                      <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                      <Qualifiers nil="true" />
+                      <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                    </Details>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+                  </Argument>
+                  <Argument AggregateType="Object" FRS_Index="1">
+                    <Value CLR_Type="System.String"></Value>
+                    <LongImage nil="true" CLR_Type="System.String" />
+                    <IsHex CLR_Type="System.Boolean">false</IsHex>
+                    <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                    <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+                  </Argument>
+                </Arguments>
+                <FunctionName CLR_Type="System.String">nvl</FunctionName>
+                <IsMethod CLR_Type="System.Boolean">false</IsMethod>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Function</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.String"></Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Left>
+            <Right AggregateType="Object">
+              <FieldIndex CLR_Type="System.Int32">1</FieldIndex>
+              <Details AggregateType="Object">
+                <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                <Selector CLR_Type="System.String">XSC_Spam</Selector>
+                <SubSelector nil="true" CLR_Type="System.String" />
+                <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                <Qualifiers nil="true" />
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+              </Details>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+            </Right>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+          </Condition>
+          <WhenTrue AggregateType="Object">
+            <Value CLR_Type="System.Boolean">true</Value>
+            <LongImage nil="true" CLR_Type="System.String" />
+            <IsHex CLR_Type="System.Boolean">false</IsHex>
+            <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+          </WhenTrue>
+          <WhenFalse AggregateType="Object">
+            <Condition AggregateType="Object">
+              <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">Equal</Op>
+              <Left AggregateType="Object">
+                <FieldIndex CLR_Type="System.Int32">2</FieldIndex>
+                <Details AggregateType="Object">
+                  <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                  <Selector CLR_Type="System.String">XSC_InitialOwnerExists</Selector>
+                  <SubSelector nil="true" CLR_Type="System.String" />
+                  <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                  <Qualifiers nil="true" />
+                  <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                </Details>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+              </Left>
+              <Right AggregateType="Object">
+                <Value CLR_Type="System.Boolean">false</Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Right>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+            </Condition>
+            <WhenTrue AggregateType="Object">
+              <Value CLR_Type="System.Boolean">false</Value>
+              <LongImage nil="true" CLR_Type="System.String" />
+              <IsHex CLR_Type="System.Boolean">false</IsHex>
+              <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+            </WhenTrue>
+            <WhenFalse AggregateType="Object">
+              <Value CLR_Type="System.Boolean">true</Value>
+              <LongImage nil="true" CLR_Type="System.String" />
+              <IsHex CLR_Type="System.Boolean">false</IsHex>
+              <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+              <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+            </WhenFalse>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Condition</Kind>
+          </WhenFalse>
+          <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Condition</Kind>
+        </Tree>
+        <ValidationStatus CLR_Type="MetaDataDefinition.Revisions.R1.ReadOnly.ExpressionValidationStatus">Ok</ValidationStatus>
+      </HiddenExpression>
+      <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+      <Id CLR_Type="System.String">426a67a7-d233-4be6-b223-3f8ffd984d00</Id>
+      <IsDisabled CLR_Type="System.Boolean">false</IsDisabled>
+      <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+      <LastModified CLR_Type="System.DateTime">2021-09-09T07:30:33.14Z</LastModified>
+      <TenantMetaRevision CLR_Type="System.Int32">0</TenantMetaRevision>
+      <ModifiedBy CLR_Type="System.String">HEATAdmin</ModifiedBy>
+      <Name CLR_Type="System.String">Create Change (no Customer)</Name>
+      <OwnerId CLR_Type="System.String">HEATAdmin</OwnerId>
+      <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+      <RoleScopes AggregateType="List">
+        <RoleScope CLR_Type="System.String" FRS_Index="0">Admin</RoleScope>
+        <RoleScope CLR_Type="System.String" FRS_Index="1">ServiceDeskAnalyst</RoleScope>
+      </RoleScopes>
+      <ShouldSave CLR_Type="System.Boolean">false</ShouldSave>
+      <TableRef CLR_Type="System.String">Journal#Email</TableRef>
+      <Revision CLR_Type="System.String">3D9B2ED96FA525FD991E86CC7F636B424F5FC7AF</Revision>
+    </QuickAction>
+  </Inserts>
+</QuickActions>
+      <Triggers Seq="1543" DbRevision="671">
+  <Inserts>
+    <Trigger FRS_ID="XSC_MailEater Link Initial Email With Change" CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef" ObjectType="Change#">
+      <TableRef CLR_Type="System.String">Change#</TableRef>
+      <TriggerEvent CLR_Type="SaaS.ComponentConfigDefinition.BusinessRuleDef+Event">Insert</TriggerEvent>
+      <ActionType CLR_Type="System.String">SearchAndLink</ActionType>
+      <ObjectId nil="true" CLR_Type="System.String" />
+      <TriggerConditions AggregateType="List" />
+      <OtherTableRef nil="true" CLR_Type="System.String" />
+      <RelationshipTag nil="true" CLR_Type="System.String" />
+      <Disable CLR_Type="System.Boolean">false</Disable>
+      <ActionDefinition AggregateType="Object" ObjectType="Change#" DisplayName="XSC_MailEater Link Initial Email With Change">
+        <ChildTableRef CLR_Type="System.String">Journal#Email</ChildTableRef>
+        <RelationshipTag CLR_Type="System.String"></RelationshipTag>
+        <SearchQueries AggregateType="List" CLR_Name="SearchQuery">
+          <SearchQuery AggregateType="Object" FRS_Index="0" ObjectType="Journal#Email">
+            <ObjectId CLR_Type="System.String">Journal#Email</ObjectId>
+            <ObjectDisplay CLR_Type="System.String">Email</ObjectDisplay>
+            <JoinRule CLR_Type="System.String">AND</JoinRule>
+            <Condition CLR_Type="System.String">=</Condition>
+            <ConditionType CLR_Type="MetaDataDefinition.Revisions.R1.SearchConditionType">ByField</ConditionType>
+            <FieldName CLR_Type="System.String">RecId</FieldName>
+            <FieldDisplay CLR_Type="System.String">RecId</FieldDisplay>
+            <FieldAlias nil="true" CLR_Type="System.String" />
+            <FieldType CLR_Type="System.String">string</FieldType>
+            <FieldValue CLR_Type="System.String">$(XSC_InitialEmailRecId)</FieldValue>
+            <FieldValueDisplay CLR_Type="System.String">$(XSC_InitialEmailRecId)</FieldValueDisplay>
+            <FieldValueBehavior CLR_Type="System.String">single</FieldValueBehavior>
+            <FieldStartValue nil="true" CLR_Type="System.String" />
+            <FieldEndValue nil="true" CLR_Type="System.String" />
+            <BracketLevel CLR_Type="System.Int32">0</BracketLevel>
+            <IsClosingBracket CLR_Type="System.Boolean">false</IsClosingBracket>
+            <IsRelatedObjectQuery CLR_Type="System.Boolean">false</IsRelatedObjectQuery>
+            <RelatedObjectId CLR_Type="System.String"></RelatedObjectId>
+            <RelatedObjectDisplay CLR_Type="System.String"></RelatedObjectDisplay>
+            <RelatedObjectOp CLR_Type="System.String"></RelatedObjectOp>
+            <RelatedObjectCount CLR_Type="System.Int32">1</RelatedObjectCount>
+            <RelatedObjects AggregateType="List">
+              <RelatedObject AggregateType="Object" FRS_Index="0">
+                <ID CLR_Type="System.String">Journal#Email</ID>
+                <ObjectId CLR_Type="System.String">Journal#Email</ObjectId>
+                <Name CLR_Type="System.String">Email</Name>
+                <Style CLR_Type="System.String">master</Style>
+                <ThereCardinality CLR_Type="System.String"></ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="1">
+                <ID CLR_Type="System.String">FRS_ApprovalVoteTracking#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_ApprovalVoteTracking#</ObjectId>
+                <Name CLR_Type="System.String">Approval Vote Tracking via FRS_ApprovalVoteTrackingContainsJournalEmail (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="2">
+                <ID CLR_Type="System.String">Attachment#.</ID>
+                <ObjectId CLR_Type="System.String">Attachment#</ObjectId>
+                <Name CLR_Type="System.String">Attachment via JournalEmailContainsAttachment (0...1 : 0...N)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">Many</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="3">
+                <ID CLR_Type="System.String">Availability#.</ID>
+                <ObjectId CLR_Type="System.String">Availability#</ObjectId>
+                <Name CLR_Type="System.String">Availability via AvailabilityContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="4">
+                <ID CLR_Type="System.String">Change#.</ID>
+                <ObjectId CLR_Type="System.String">Change#</ObjectId>
+                <Name CLR_Type="System.String">Change via  (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="5">
+                <ID CLR_Type="System.String">CI#.ivnt_CIContainsJournal</ID>
+                <ObjectId CLR_Type="System.String">CI#</ObjectId>
+                <Name CLR_Type="System.String">CI via ivnt_CIContainsJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="6">
+                <ID CLR_Type="System.String">ContactGroup#.</ID>
+                <ObjectId CLR_Type="System.String">ContactGroup#</ObjectId>
+                <Name CLR_Type="System.String">Contact Group via ContactGroupContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="7">
+                <ID CLR_Type="System.String">ivnt_ContractLineItem#.ivnt_ContractLineItemAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">ivnt_ContractLineItem#</ObjectId>
+                <Name CLR_Type="System.String">Contract Line Item via ivnt_ContractLineItemAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="8">
+                <ID CLR_Type="System.String">CI#Contract.CIContractAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">CI#Contract</ObjectId>
+                <Name CLR_Type="System.String">Contract via CIContractAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="9">
+                <ID CLR_Type="System.String">LocationGroup#DSL.</ID>
+                <ObjectId CLR_Type="System.String">LocationGroup#DSL</ObjectId>
+                <Name CLR_Type="System.String">Definitive Software Library via DSLContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="10">
+                <ID CLR_Type="System.String">ivnt_Disposal#.ivnt_DisposalContainsJournal</ID>
+                <ObjectId CLR_Type="System.String">ivnt_Disposal#</ObjectId>
+                <Name CLR_Type="System.String">Disposal via ivnt_DisposalContainsJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="11">
+                <ID CLR_Type="System.String">Employee#.</ID>
+                <ObjectId CLR_Type="System.String">Employee#</ObjectId>
+                <Name CLR_Type="System.String">Employee via EmployeeContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="12">
+                <ID CLR_Type="System.String">Task#WorkOrder.ActivityHistory</ID>
+                <ObjectId CLR_Type="System.String">Task#WorkOrder</ObjectId>
+                <Name CLR_Type="System.String">External Task via TaskWorkOrderAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="13">
+                <ID CLR_Type="System.String">FRS_HC_CallLog#.Journal</ID>
+                <ObjectId CLR_Type="System.String">FRS_HC_CallLog#</ObjectId>
+                <Name CLR_Type="System.String">HEAT Call Log via FRS_HC_CallLogAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="14">
+                <ID CLR_Type="System.String">Frs_ops_package#.</ID>
+                <ObjectId CLR_Type="System.String">Frs_ops_package#</ObjectId>
+                <Name CLR_Type="System.String">HEAT Release Package via Frs_ops_packageAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="15">
+                <ID CLR_Type="System.String">Frs_ops_project#.</ID>
+                <ObjectId CLR_Type="System.String">Frs_ops_project#</ObjectId>
+                <Name CLR_Type="System.String">HEAT Release Project via Frs_ops_projectAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="16">
+                <ID CLR_Type="System.String">Incident#.</ID>
+                <ObjectId CLR_Type="System.String">Incident#</ObjectId>
+                <Name CLR_Type="System.String">Incident via  (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="17">
+                <ID CLR_Type="System.String">ivnt_Invoice#.ivnt_InvoiceAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">ivnt_Invoice#</ObjectId>
+                <Name CLR_Type="System.String">Invoice via ivnt_InvoiceAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="18">
+                <ID CLR_Type="System.String">Frs_Prj_Issue#.IssueNotes</ID>
+                <ObjectId CLR_Type="System.String">Frs_Prj_Issue#</ObjectId>
+                <Name CLR_Type="System.String">Issue via Frs_Prj_IssueAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="19">
+                <ID CLR_Type="System.String">FRS_ITFM_BudgetItem#.Journal</ID>
+                <ObjectId CLR_Type="System.String">FRS_ITFM_BudgetItem#</ObjectId>
+                <Name CLR_Type="System.String">ITFM Budget Item via FRS_ITFM_BudgetItemAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="20">
+                <ID CLR_Type="System.String">FRS_ITFM_BudgetRequirement#.Journal</ID>
+                <ObjectId CLR_Type="System.String">FRS_ITFM_BudgetRequirement#</ObjectId>
+                <Name CLR_Type="System.String">ITFM Budget Requirement via FRS_ITFM_BudgetRequirementAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="21">
+                <ID CLR_Type="System.String">FRS_ITFM_MasterBudgetPlan#.Journal</ID>
+                <ObjectId CLR_Type="System.String">FRS_ITFM_MasterBudgetPlan#</ObjectId>
+                <Name CLR_Type="System.String">ITFM Master Budget Plan via FRS_ITFM_MasterBudgetPlanAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="22">
+                <ID CLR_Type="System.String">FRS_ITFM_SubBudgetPlan#.Journal</ID>
+                <ObjectId CLR_Type="System.String">FRS_ITFM_SubBudgetPlan#</ObjectId>
+                <Name CLR_Type="System.String">ITFM Sub-Budget Plan via FRS_ITFM_SubBudgetPlanAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="23">
+                <ID CLR_Type="System.String">FRS_Knowledge#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_Knowledge#</ObjectId>
+                <Name CLR_Type="System.String">Knowledge via FRS_KnowledgeContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="24">
+                <ID CLR_Type="System.String">ReleaseMilestone#.</ID>
+                <ObjectId CLR_Type="System.String">ReleaseMilestone#</ObjectId>
+                <Name CLR_Type="System.String">Milestone via ReleaseMilestoneContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="25">
+                <ID CLR_Type="System.String">LMPurchaseItem#.LMPurchaseItemAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">LMPurchaseItem#</ObjectId>
+                <Name CLR_Type="System.String">Old Purchase Item via LMPurchaseItemAssocJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="26">
+                <ID CLR_Type="System.String">OrderedSoftwareCatalogItem#.</ID>
+                <ObjectId CLR_Type="System.String">OrderedSoftwareCatalogItem#</ObjectId>
+                <Name CLR_Type="System.String">Ordered Catalog Item via OrderedSoftwareCatalogItemContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="27">
+                <ID CLR_Type="System.String">Frs_Portfolio#.PortfolioActivity</ID>
+                <ObjectId CLR_Type="System.String">Frs_Portfolio#</ObjectId>
+                <Name CLR_Type="System.String">Portfolio via Frs_PortfolioAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="28">
+                <ID CLR_Type="System.String">Problem#.</ID>
+                <ObjectId CLR_Type="System.String">Problem#</ObjectId>
+                <Name CLR_Type="System.String">Problem via  (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="29">
+                <ID CLR_Type="System.String">FRS_PriceItem#.FRS_PriceItemAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">FRS_PriceItem#</ObjectId>
+                <Name CLR_Type="System.String">Product Catalog Item via FRS_PriceItemAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="30">
+                <ID CLR_Type="System.String">Frs_Prj_Phase#.ProjectPhaseNotes</ID>
+                <ObjectId CLR_Type="System.String">Frs_Prj_Phase#</ObjectId>
+                <Name CLR_Type="System.String">Project Phase via Frs_Prj_PhaseContainsJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="31">
+                <ID CLR_Type="System.String">Frs_Project#.ProjectNotes</ID>
+                <ObjectId CLR_Type="System.String">Frs_Project#</ObjectId>
+                <Name CLR_Type="System.String">Project via  (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="32">
+                <ID CLR_Type="System.String">ivnt_PurchaseOrder#.ivnt_PurchaseOrderAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">ivnt_PurchaseOrder#</ObjectId>
+                <Name CLR_Type="System.String">Purchase Order via ivnt_PurchaseOrderAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="33">
+                <ID CLR_Type="System.String">FRS_ReleasePackage#.</ID>
+                <ObjectId CLR_Type="System.String">FRS_ReleasePackage#</ObjectId>
+                <Name CLR_Type="System.String">Release Package via FRS_ReleasePackageAssociatedJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="34">
+                <ID CLR_Type="System.String">ReleaseProject#.</ID>
+                <ObjectId CLR_Type="System.String">ReleaseProject#</ObjectId>
+                <Name CLR_Type="System.String">Release via  (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="35">
+                <ID CLR_Type="System.String">Journal#RemoteControlSession.Attachment</ID>
+                <ObjectId CLR_Type="System.String">Journal#RemoteControlSession</ObjectId>
+                <Name CLR_Type="System.String">Remote Control Session via JournalRemoteControlSessionAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="36">
+                <ID CLR_Type="System.String">Frs_Prj_Risk#.RiskNotes</ID>
+                <ObjectId CLR_Type="System.String">Frs_Prj_Risk#</ObjectId>
+                <Name CLR_Type="System.String">Risk via Frs_Prj_RiskContainsJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="37">
+                <ID CLR_Type="System.String">ScheduleEntry#.</ID>
+                <ObjectId CLR_Type="System.String">ScheduleEntry#</ObjectId>
+                <Name CLR_Type="System.String">Schedule Entry via ScheduleEntryContainsJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="38">
+                <ID CLR_Type="System.String">ServiceReqTemplate#.</ID>
+                <ObjectId CLR_Type="System.String">ServiceReqTemplate#</ObjectId>
+                <Name CLR_Type="System.String">Service Request Template via ServiceReqTemplateContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="39">
+                <ID CLR_Type="System.String">ServiceReq#.</ID>
+                <ObjectId CLR_Type="System.String">ServiceReq#</ObjectId>
+                <Name CLR_Type="System.String">Service Request via  (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="40">
+                <ID CLR_Type="System.String">ivnt_Shipment#.ivnt_ShipmentAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">ivnt_Shipment#</ObjectId>
+                <Name CLR_Type="System.String">Shipment via ivnt_ShipmentAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="41">
+                <ID CLR_Type="System.String">FRS_Software#.FRS_SoftwareAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">FRS_Software#</ObjectId>
+                <Name CLR_Type="System.String">Software via FRS_SoftwareAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="42">
+                <ID CLR_Type="System.String">Task#Assignment.</ID>
+                <ObjectId CLR_Type="System.String">Task#Assignment</ObjectId>
+                <Name CLR_Type="System.String">Task via JournalAssocTaskAssignment (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="43">
+                <ID CLR_Type="System.String">Task#SoftwareInstallation.TaskSoftwareInstallationAssocJournal</ID>
+                <ObjectId CLR_Type="System.String">Task#SoftwareInstallation</ObjectId>
+                <Name CLR_Type="System.String">Task.SoftwareInstallation via TaskSoftwareInstallationAssocJournal (0...N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+              <RelatedObject AggregateType="Object" FRS_Index="44">
+                <ID CLR_Type="System.String">Vendor#.</ID>
+                <ObjectId CLR_Type="System.String">Vendor#</ObjectId>
+                <Name CLR_Type="System.String">Vendor via VendorContainsJournal (N : 0...1)</Name>
+                <Style CLR_Type="System.String">related</Style>
+                <ThereCardinality CLR_Type="System.String">One</ThereCardinality>
+              </RelatedObject>
+            </RelatedObjects>
+            <RelatedRelatedObjects nil="true" />
+            <MasterObjectId CLR_Type="System.String">Journal#Email</MasterObjectId>
+            <IsRelatedObjectCondition CLR_Type="System.Boolean">false</IsRelatedObjectCondition>
+            <SubQueries nil="true" CLR_Name="SubQuery" />
+          </SearchQuery>
+        </SearchQueries>
+        <ActionType CLR_Type="System.String">SearchAndLink</ActionType>
+        <CreatedBy CLR_Type="System.String">HEATAdmin</CreatedBy>
+        <CreatedDateTime CLR_Type="System.DateTime">2021-09-09T11:43:55.463Z</CreatedDateTime>
+        <Description nil="true" CLR_Type="System.String" />
+        <DisabledExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <ExecConfirm CLR_Type="System.Boolean">false</ExecConfirm>
+        <ExecConfirmMsg nil="true" CLR_Type="System.String" />
+        <GroupName nil="true" CLR_Type="System.String" />
+        <HiddenExpression nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" />
+        <HideFromUI CLR_Type="System.Boolean">false</HideFromUI>
+        <Id CLR_Type="System.String">af4fc2c3-1bf2-467a-a596-b828cf383c09</Id>
+        <IsDisabled CLR_Type="System.Boolean">false</IsDisabled>
+        <IsInternal CLR_Type="System.Boolean">false</IsInternal>
+        <LastModified CLR_Type="System.DateTime">0001-01-01T00:00:00</LastModified>
+        <TenantMetaRevision CLR_Type="System.Int32">0</TenantMetaRevision>
+        <ModifiedBy nil="true" CLR_Type="System.String" />
+        <Name CLR_Type="System.String">XSC_MailEater Link Initial Email With Change</Name>
+        <OwnerId nil="true" CLR_Type="System.String" />
+        <Permissions />
+        <RoleScopes nil="true" />
+        <ShouldSave CLR_Type="System.Boolean">false</ShouldSave>
+        <TableRef CLR_Type="System.String">Change#</TableRef>
+        <Revision nil="true" CLR_Type="System.String" />
+      </ActionDefinition>
+      <Name CLR_Type="System.String">XSC_MailEater Link Initial Email With Change</Name>
+      <Description CLR_Type="System.String"></Description>
+      <ConditionalExpression AggregateType="Object" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData" ObjectType="Change#">
+        <ExpressionPrettyText CLR_Type="System.String">$(nvl(XSC_InitialEmailRecId,  "") != "")</ExpressionPrettyText>
+        <Description nil="true" CLR_Type="System.String" />
+        <FieldRefs AggregateType="List">
+          <FieldRef CLR_Type="System.String" FRS_Index="0">XSC_InitialEmailRecId</FieldRef>
+        </FieldRefs>
+        <IsFullExpression CLR_Type="System.Boolean">false</IsFullExpression>
+        <Name nil="true" CLR_Type="System.String" />
+        <Tree AggregateType="Object">
+          <Op CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+BinaryOp">NotEqual</Op>
+          <Left AggregateType="Object">
+            <Arguments AggregateType="List">
+              <Argument AggregateType="Object" FRS_Index="0">
+                <FieldIndex CLR_Type="System.Int32">0</FieldIndex>
+                <Details AggregateType="Object">
+                  <Container nil="true" CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+ExpressionNode" />
+                  <Selector CLR_Type="System.String">XSC_InitialEmailRecId</Selector>
+                  <SubSelector nil="true" CLR_Type="System.String" />
+                  <IsObjectSelector CLR_Type="System.Boolean">false</IsObjectSelector>
+                  <Qualifiers nil="true" />
+                  <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Selection</Kind>
+                </Details>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Field</Kind>
+              </Argument>
+              <Argument AggregateType="Object" FRS_Index="1">
+                <Value CLR_Type="System.String"></Value>
+                <LongImage nil="true" CLR_Type="System.String" />
+                <IsHex CLR_Type="System.Boolean">false</IsHex>
+                <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+                <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+              </Argument>
+            </Arguments>
+            <FunctionName CLR_Type="System.String">nvl</FunctionName>
+            <IsMethod CLR_Type="System.Boolean">false</IsMethod>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Function</Kind>
+          </Left>
+          <Right AggregateType="Object">
+            <Value CLR_Type="System.String"></Value>
+            <LongImage nil="true" CLR_Type="System.String" />
+            <IsHex CLR_Type="System.Boolean">false</IsHex>
+            <IsVerbatimText CLR_Type="System.Boolean">false</IsVerbatimText>
+            <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Literal</Kind>
+          </Right>
+          <Kind CLR_Type="MetaDataDefinition.Revisions.R1.ExpressionMetaData+NodeKind">Binary</Kind>
+        </Tree>
+        <ValidationStatus CLR_Type="MetaDataDefinition.Revisions.R1.ReadOnly.ExpressionValidationStatus">Ok</ValidationStatus>
+      </ConditionalExpression>
+      <Permissions CLR_Type="MetaDataDefinition.Revisions.R1.Permissions">Delete, Update</Permissions>
+    </Trigger>
+  </Inserts>
+</Triggers>
+    </Updates>
+  </Differences>
+  <Views>
+    <Related />
+    <Unrelated />
+  </Views>
+</Metadata>
