@@ -1,5 +1,5 @@
 # Introduction 
-Custom MailEtaer fro Ivanti ServiceManager
+Custom MailEtaer for Ivanti ServiceManager
 
 # Getting Started
     1. Apply Packages:
